@@ -1,0 +1,30 @@
+@mixin typeTags {
+    &.-bold {
+        font-weight: bold;
+    }
+
+    &.-caps {
+        text-transform: uppercase;
+        letter-spacing: .05em;
+    }
+
+    &.-center {
+        text-align: center;
+    }
+
+    &.-emphasize {
+        font-style: italic;
+    }
+
+    &.-inverse {
+        color: white;
+    }
+
+    &.-muted {
+        @include muted;
+    }
+}
+
+@mixin muted {
+    opacity: .5;
+}

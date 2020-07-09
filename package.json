@@ -1,0 +1,22 @@
+{
+  "name": "birdies-for-st-jude",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "scss": "node-sass --watch styles/scss/ -o styles/"
+  },
+  "author": "Catamaran",
+  "license": "ISC",
+  "dependencies": {
+    "grunt": "^1.1.0",
+    "grunt-cli": "^1.3.2",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^4.0.1",
+    "grunt-contrib-watch": "^1.1.0",
+    "node-sass": "^4.13.1"
+  }
+}

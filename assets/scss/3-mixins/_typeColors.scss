@@ -1,0 +1,8 @@
+@import "../1-variables/_variables";
+@import "../2-functions/_functions";
+
+@mixin typeColors {
+    &.color-primary {
+        color: color(brand, primary)
+    }
+}
