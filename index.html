@@ -28,9 +28,12 @@
     </script>
 </head>
 
-<body>
+<body itemscope itemtype="https://schema.org/Event">
     <header>
-        <h1><img src="assets/img/logo.png" alt="Birdies for St. Jude"/></h1>
+        <h1>
+            <img src="assets/img/logo.png" alt="Birdies for St. Jude"/>
+            <meta itemprop="name" content="Birdies for St. Jude" />
+        </h1>
         <dl>
             <dt>Total Birdies</dt>
             <dd>345</dd>
@@ -43,9 +46,31 @@
         <div>
             <div>
                 <h1>Lorem ipsum dolor sit amet</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ex dolores molestias dolorem similique necessitatibus debitis sapiente accusantium esse? Molestias suscipit veritatis iure et! Soluta, natus magnam? Culpa, ut consequatur.</p>
+                <p itemprop="description">
+                    From
+                    <time itemprop="startDate" datetime="2020-7-30">July 30th</time>
+                    to
+                    <time itemprop="endDate" datetime="2020-8-2">August 2nd</time>
+                    , the 
+                    <span itemprop="superEvent" itemscope itemtype="https://schema.org/SportsEvent">
+                        <span itemprop="name description">
+                            <span itemprop="organizer" itemscope itemtype="https://schema.org/Organization">
+                                <span itemprop="name">World Golf Championships</span>
+                                <link itemprop="url" href="https://www.worldgolfchampionships.com/" />
+                            </span>
+                            -FedEx St. Jude Invitational
+                        </span>
+                        <link itemprop="url" href="https://www.pgatour.com/tournaments/wgc-fedex-st-jude-invitational.html" />
+                    </span>
+                    will once again raise funds and awareness for the
+                    <span itemprop="organizer" itemscope itemtype="https://schema.org/Organization">
+                        <span itemprop="name">St. Jude Children's Research Hospital</span>
+                        <link itemprop="url" href="https://www.stjude.org/" />
+                    </span>
+                    . This year a select group of the world's top golfers are raising the stakes by making personal pledges for every birdie they score. This is your chance to get in on the action!
+                </p>
             </div>
-            <img src="assets/img/golfer.jpg" alt="" />
+            <img itemprop="image" src="assets/img/golfer.jpg" alt="" />
         </div>
         <div>
             <div>
@@ -63,7 +88,7 @@
                 </div>
                 <div>
                     <select name="Sort by">
-                        <option vale="Option A" >Option A</option>
+                        <option vale="Option A">Option A</option>
                         <option vale="Option B">Option B</option>
                         <option vale="Option C">Option C</option>
                     </select>>
@@ -79,27 +104,27 @@
                     <th scope="col">Est Raised</th>
                     <th scope="col">Join</th>
                 </tr>
-                <tr>
+                <tr itemprop="performer" itemscope itemtype="https://schema.org/Person">
                     <td>1</td>
-                    <td scope="row">Koepka, Brooks</td>
+                    <td scope="row" itemprop="name">Koepka, Brooks</td>
                     <td>345</td>
                     <td>$13,475</td>
                     <td>
                         <a href="http://catamaran.cc">Pledge</a>
                     </td>
                 </tr>
-                <tr>
+                <tr itemprop="performer" itemscope itemtype="https://schema.org/Person">
                     <td>1</td>
-                    <td scope="row">Koepka, Brooks</td>
+                    <td scope="row" itemprop="name">Koepka, Brooks</td>
                     <td>345</td>
                     <td>$13,475</td>
                     <td>
                         <a href="http://catamaran.cc">Pledge</a>
                     </td>
                 </tr>
-                <tr>
+                <tr itemprop="performer" itemscope itemtype="https://schema.org/Person">
                     <td>1</td>
-                    <td scope="row">Koepka, Brooks</td>
+                    <td scope="row" itemprop="name">Koepka, Brooks</td>
                     <td>345</td>
                     <td>$13,475</td>
                     <td>
@@ -176,6 +201,16 @@
             </a>
         </div>
     </footer>
+
+    <!-- Meta Data for Event Schema-->
+    <link itemprop="eventStatus" href="https://schema.org/EventScheduled" />
+    <link itemprop="eventAttendanceMode" href="https://schema.org/OfflineEventAttendanceMode" />
+    <span itemprop="location" itemscope itemtype="https://schema.org/VirtualLocation">
+        <meta itemprop="name" content="Birdies for St. Jude website" />
+        <link itemprop="url" href="birdiesforstjude.org" />
+    </span>
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="assets/app.min.js?q=1"></script>
 </body>
