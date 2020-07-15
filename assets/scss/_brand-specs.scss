@@ -1,0 +1,41 @@
+
+// Styles / Brand Specification Sheet
+// -----------------------------------------------------------------------------
+
+
+// Base
+
+$base-size:             16px;
+
+
+// Colors
+
+$color-primary:         blue;
+$color-secondary:       red;
+$color-neutral:         grey;
+$color-neutral-light:   lightGrey;
+$color-neutral-dark:    darkGrey;
+
+
+// Fonts
+
+$font-brand:            #{'Barlow', sans-serif};
+$font-body:             #{'Open Sans', sans-serif};
+
+
+// Scale
+
+$size-smallest:         .5rem;
+$size-smaller:          .6rem;
+$size-small:            .8rem;
+$size-base:             1rem;
+$size-large:            1.2rem;
+$size-larger:           1.5rem;
+$size-largest:          2rem;
+
+
+// Borders
+
+$border-width:          .1rem;
+$border-color:          $color-neutral-light;
+$border-radius:         .5rem;
