@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "scss": "node-sass --watch styles/scss/ -o styles/",
-    "start": "serve"
+    "start": "autoreload-server ./ 5000"
   },
   "author": "Catamaran",
   "license": "ISC",
@@ -21,6 +21,6 @@
     "node-sass": "^4.13.1"
   },
   "devDependencies": {
-    "serve": "^11.3.2"
+    "simple-autoreload-server": "^0.2.7"
   }
 }
