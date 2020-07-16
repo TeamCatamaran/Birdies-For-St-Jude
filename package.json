@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "scss": "node-sass --watch styles/scss/ -o styles/"
+    "scss": "node-sass --watch styles/scss/ -o styles/",
+    "start": "serve"
   },
   "author": "Catamaran",
   "license": "ISC",
@@ -18,5 +19,8 @@
     "grunt-contrib-uglify": "^4.0.1",
     "grunt-contrib-watch": "^1.1.0",
     "node-sass": "^4.13.1"
+  },
+  "devDependencies": {
+    "serve": "^11.3.2"
   }
 }
