@@ -30,73 +30,80 @@
 
 <body itemscope itemtype="https://schema.org/Event">
     <header>
-        <h1>
-            <img src="assets/img/logo.png" alt="Birdies for St. Jude"/>
-            <meta itemprop="name" content="Birdies for St. Jude" />
-        </h1>
-        <dl>
-            <dt>Total Birdies</dt>
-            <dd>345</dd>
-            <dt>Est. Total Raised</dt>
-            <dd>$230,196</dd>
-        </dl>
-        <a href="http://catamaran.cc">Pledge Now</a>
+        <div class="intro">
+            <h1 itemprop="name">Birdies for St. Jude</h1>
+            <p itemprop="description">Join us in the fight against childhood cancer by pledging every birdie #forStJude.</p>
+            <a class="button" href="#leaderboard">Find Your Golfer</button>
+        </div>
+        <div class="banner">
+            <img src="assets/img/logo.png" alt=""/>
+            <dl>
+                <dt>Total Birdies</dt>
+                <dd>345</dd>
+                <dt>Est. Total Raised</dt>
+                <dd>$230,196</dd>
+            </dl>
+            <a class="button" href="http://catamaran.cc">Pledge</a>
+        </div>
+        <div class="cover">
+            <img src="assets/img/brooksandteam.png" alt="Brooks with St. Jude Patients Calvin, Bridget, Allyson, Reid, Bailey, Quincy, Dakota" />
+            <img src="assets/img/grass-large.jpg" alt="" />
+            <img src="assets/img/course-outline-1.png" alt="" />
+            <img src="assets/img/course-outline-2.png" alt="" />
+            <img src="assets/img/course-outline-3.png" alt="" />
+            <img src="assets/img/dots-1.png" alt="" />
+        </div>
     </header>
     <main>
-        <div>
+        <div class="section" id="about">
             <div>
-                <h1>Lorem ipsum dolor sit amet</h1>
+                <div>
+                   <img src="assets/img/logo-birdies.png" alt="" />
+                   <img src="assets/img/logo-stjude.png" alt="" />
+                </div>
+                <h2>Lorem ipsum dolor sit amet</h1>
                 <p itemprop="description">
                     From
                     <time itemprop="startDate" datetime="2020-7-30">July 30th</time>
                     to
-                    <time itemprop="endDate" datetime="2020-8-2">August 2nd</time>
-                    , the 
+                    <time itemprop="endDate" datetime="2020-8-2">August 2nd</time>, the 
                     <span itemprop="superEvent" itemscope itemtype="https://schema.org/SportsEvent">
                         <span itemprop="name description">
                             <span itemprop="organizer" itemscope itemtype="https://schema.org/Organization">
-                                <span itemprop="name">World Golf Championships</span>
                                 <link itemprop="url" href="https://www.worldgolfchampionships.com/" />
-                            </span>
-                            -FedEx St. Jude Invitational
+                                <span itemprop="name">World Golf Championships</span></span>-FedEx St. Jude Invitational
                         </span>
                         <link itemprop="url" href="https://www.pgatour.com/tournaments/wgc-fedex-st-jude-invitational.html" />
                     </span>
                     will once again raise funds and awareness for the
                     <span itemprop="organizer" itemscope itemtype="https://schema.org/Organization">
-                        <span itemprop="name">St. Jude Children's Research Hospital</span>
                         <link itemprop="url" href="https://www.stjude.org/" />
-                    </span>
-                    . This year a select group of the world's top golfers are raising the stakes by making personal pledges for every birdie they score. This is your chance to get in on the action!
+                        <span itemprop="name">St. Jude Children's Research Hospital</span></span>. This year a select group of the world's top golfers are raising the stakes by making personal pledges for every birdie they score. This is your chance to get in on the action!
                 </p>
             </div>
-            <img itemprop="image" src="assets/img/golfer.jpg" alt="" />
-        </div>
-        <div>
             <div>
-                <h2>Lorem ipsum dolor sit amet</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ex dolores molestias dolorem similique necessitatibus debitis sapiente accusantium esse? Molestias suscipit veritatis iure et! Soluta, natus magnam? Culpa, ut consequatur.</p>
+                <img src="assets/img/southwind.jpg" alt="Hole 16, Par 5 at TPC Southwind" />
+                <img src="assets/img/course-outline-4.png" alt="" />
+                <img src="assets/img/course-outline-5.png" alt="" />
             </div>
-            <img src="assets/img/southwind.jpg" alt="Hole 16, Par 5 at TPC Southwind" />
         </div>
-        <div>
+        <div class="section" id="leaderboard">
             <h2>Leaderboard</h2>
             <div>
-                <div>
+                <span>
                     <i class="icon-search" aria-hidden="true" />
                     <input type="search" aria-label="Find Your Golfer" />
-                </div>
-                <div>
+                </span>
+                <span>
                     <select name="Sort by">
                         <option vale="Option A">Option A</option>
                         <option vale="Option B">Option B</option>
                         <option vale="Option C">Option C</option>
-                    </select>>
+                    </select>
                     <i class="icon-caretDown" aria-hidden="true" />
-                </div>
+                </span>
             </div>
             <table>
-                <caption>Golfer's participating in the Birdies for St. Jude campagin.</caption>
                 <tr>
                     <th scope="col">Rank</th>
                     <th scope="col">Golfer</th>
@@ -136,22 +143,28 @@
         </div>
         <div>
             <div>
-                <h2>
-                    <img src="assets//img/logo-stjude.png" alt="St. Jude Children's Research Hospital" />
-                    <span>Finding Cures. Saving Lives.</span>
-                </h2>
-                <p>St. Jude is leading the way the world understands, treats, and defeats childhood cancer and other life-threatening diseases.</p>
-                <a href="http://catamaran.cc">Visit stjude.org</a>
+                <img src="assets//img/logo-stjude.png" alt="" />
+                <h2>Finding Cures. Saving Children<sup>&#174;</sup>.</h2>
+                <p>That's something we can all agree on. Learn how St. Jude is leading the way the world understands, treats, and defeats childhood cancer and other life-threatening diseases.</p>
+                <a class="button" href="http://catamaran.cc">Visit stjude.org</a>
             </div>
-            <img src="assets/img/players.jpg" alt="A young baseball team and their coash posing with a trophy." />
-        </div>
-        <div>
             <div>
+                <img src="assets/img/justin.jpg" alt="Justin with patient Dakota" />
+                <img src="assets/img/course-outline-6.png" alt="" />
+                <img src="assets/img/course-outline-7.png" alt="" />
+                <img src="assets/img/dots-2.png" alt="" />
+                <img src="assets/img/dots-3.png" alt="" />
+            </div>
+            
+        </div>
+        <div class="layout-2col">
+            <div class="callout">
                 <h2>Lorem ipsum dolor sit amet</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, nisi sit! Iure, earum ullam ducimus vero, natus quis illum aliquam ratione obcaecati quisquam quibusdam eaque alias dolor.</p>
-                <a href="http://catamaran.cc">Go to auction</a>
+                <a class="button" href="http://catamaran.cc">Go to auction</a>
+                <img src="assets/img/contour-lines-1" alt="" />
             </div>
-            <div>
+            <div class="callout">
                 <h2>Thank you to our sponsors</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, nisi sit! Iure, earum ullam ducimus vero, natus quis illum aliquam ratione obcaecati quisquam quibusdam eaque alias dolor.</p>
                 <ul>
@@ -165,35 +178,32 @@
                         <img stc="assets/img/logo-invite.png" alt="FedEx St. Jude Invitational" />
                     </li>
                 </ul>
+                <img src="assets/img/contour-lines-2" alt="" />
             </div>
         </div>
     </main>
     <footer>
-        <h1>
-            <img src="assets/img/logo-pledge.png" alt="Powered by Pledge It" />
-        </h1>
-        <p>PLEDGE IT is the leading performance-based fundraising website. We believe support for a cause is earned, not given. Our community of athletes are inspired to earn the change they want to see in the world! Join the movement at <a href="http://wwww.pledgeit.org">pledgeit.org</a>.</p>
-        <div>
-            <img src="assets/img/logo-stjude.png" alt="St. Jude Children's Research Hospital"/>
-            <div>
-                <p>Finding cures. Saving Lives.</p>
-                <div>
-                    <ul>
-                        <li>
-                            <a href="http://catamaran.cc">
-                                <img src="assets/img/logo-facebook.png" alt="Follow us on Facebook" />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://catamaran.cc">
-                                <img src="assets/img/logo-twitter.png" alt="Follow us on Twitter" />
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+        <div >
+            <p>St. Jude is leading the way the world understands, treats, and defeats childhood cancer and other life-threatening diseases.</p>
+            <div class="follow">
+                <ul>
+                    <li>
+                        <a href="http://catamaran.cc">
+                            <img src="assets/img/logo-facebook.png" alt="Follow us on Facebook" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://catamaran.cc">
+                            <img src="assets/img/logo-twitter.png" alt="Follow us on Twitter" />
+                        </a>
+                    </li>
+                </ul>
             </div>
+            <img src="assets/img/logo-stjude.png"/>
         </div>
         <div>
+            <img src="assets/img/logo-pledge.png" alt="Powered by Pledge It" />
+            <p>PLEDGE IT is the leading performance-based fundraising website. We believe support for a cause is earned, not given. Our community of athletes are inspired to earn the change they want to see in the world! Join the movement at <a href="http://wwww.pledgeit.org">pledgeit.org</a>.</p>
             <p>2020 Pledge Platform, LLC. Trademarks are the property of their respective owners. All rights reserved. All company, organization and product names, tradename, and logos are trademarks &trade; or registered &reg; trademarks of their respective holders. Use of such trademarks does not imply any affiliation with or endorsement by the trademark owners.</p>
             <a href="http://catamaran.cc" target="_blank">
                 <span>Site By</span>
@@ -206,6 +216,7 @@
     <link itemprop="eventStatus" href="https://schema.org/EventScheduled" />
     <link itemprop="eventAttendanceMode" href="https://schema.org/OfflineEventAttendanceMode" />
     <span itemprop="location" itemscope itemtype="https://schema.org/VirtualLocation">
+        <!-- Google requires a location -->
         <meta itemprop="name" content="Birdies for St. Jude website" />
         <link itemprop="url" href="birdiesforstjude.org" />
     </span>

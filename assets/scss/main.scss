@@ -1,7 +1,3 @@
 
-@import "1-variables/_variables",
-        "2-functions/_functions",
-        "3-mixins/_mixins",
-        "4-elements/_elements",
-        "5-components/_components",
-        "6-pages/_pages";
+@import "brand-specs",
+        "elements/_elements";
