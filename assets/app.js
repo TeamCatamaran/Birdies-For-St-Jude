@@ -141,7 +141,7 @@ birdiesforstjude.views.MainView = (function () {
         // --------------------------------------------
 
         _initialize: function () {
-            this._$stats = $('[bd-total]');
+            this._$stats = $('[bd-stats]');
 
             this._leaderboardService = new services.LeaderboardService();
 
@@ -167,6 +167,7 @@ birdiesforstjude.views.MainView = (function () {
             this._leaderboardService.getTemplate("birdiesforstjude", {
                 onSuccess: $.proxy(function (response) {
                     this._$stats
+                        .find('[bd-total-stats]')
                         .text(this._getValue(response.amountRaised))
                         .removeClass("-preload");
                 }, this)
@@ -174,6 +175,8 @@ birdiesforstjude.views.MainView = (function () {
         },
 
         _getGolfers: function () {
+            birdies = 0;
+
             $("[bd-slug]").each($.proxy(function (index, golfer) {
                 this._leaderboardService.getCampaign(golfer.getAttribute("bd-slug"), {
                     onSuccess: $.proxy(function (response) {
@@ -188,6 +191,12 @@ birdiesforstjude.views.MainView = (function () {
 
                         $target.find("[bd-donate]")
                             .attr("href", response.url + "/pledge")
+                            .removeClass("-preload");
+
+                        birdies += response.performanceTotal;
+                        this._$stats
+                            .find('[bd-birdie-stats]')
+                            .text(birdies)
                             .removeClass("-preload");
                     }, this)
                 });
