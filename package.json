@@ -4,8 +4,13 @@
   "description": "",
   "main": "index.html",
   "scripts": {
+<<<<<<< Updated upstream
     "scss": "node-sass --watch styles/scss/ -o styles/",
     "start": "autoreload-server ./ 5000"
+=======
+    "scss": "node-sass --watch assets/styles/ -o assets/styles",
+    "start": "serve"
+>>>>>>> Stashed changes
   },
   "author": "Catamaran",
   "license": "ISC",

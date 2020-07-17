@@ -1,0 +1,17 @@
+
+button, .button {
+    background-color: $color-primary;
+    border-radius: $border-radius;
+    border: none;
+    color: white;
+    display: inline-block;
+    font-family: $font-brand;
+    font-size: $size-large;
+    letter-spacing: .1em;
+    line-height: 2.5;
+    outline: none;
+    padding: 0 1em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}

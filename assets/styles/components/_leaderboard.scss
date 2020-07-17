@@ -1,0 +1,142 @@
+
+.leaderboard {
+
+    .leaderboard-controls {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin-top: 3rem;
+
+        .leaderboard-search {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            position: relative;
+
+            .icon-search {
+                position: absolute;
+                left: 1rem;
+            }
+
+            input {
+                padding-left: 3rem;
+                width: 100%;
+            }
+
+            input + label {
+                position: absolute;
+                left: 3rem;
+                color: $color-neutral-dark;
+                opacity: .5;
+                font-size: $size-large;
+                transition: opacity .16s ease-in-out;
+                pointer-events: none;
+            }
+            
+        }
+
+        .leaderboard-sort {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            position: relative;
+
+            select {
+                width: 100%;
+                margin-top: 1rem;
+                color: rgba(0,0,0,.5);
+                padding-right: 1rem;
+
+                &::-ms-expand {
+                    display: none;
+                }
+            }
+
+            .icon-downArrow {
+                position: absolute;
+                right: 1rem;
+                margin-top: .5rem;
+                pointer-events: none;
+            }
+        }
+    }
+
+    .leaderboard-table {
+        border: $border-width solid $color-neutral-light;
+        border-radius: $border-radius;
+        overflow: hidden;
+        margin: 3rem 0;
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th {
+            @include caps;
+            letter-spacing: .1em;
+            font-family: $font-brand;
+            height: 10rem;
+            position: relative;
+
+            .rotate-none {
+                display: block;
+                position: absolute;
+                bottom: .5rem;
+                text-align: center;
+                width: 100%;
+                color: $color-neutral-dark;
+                font-size: $size-large;
+            }
+        }
+
+        td {
+            padding: .5rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+            // Hide some columns on smaller screens
+        th:nth-of-type(1), td:nth-of-type(1),
+        th:nth-of-type(3), td:nth-of-type(3) {
+            display: none;
+        }
+
+        th:nth-of-type(1),
+        th:nth-of-type(3),
+        th:nth-of-type(4),
+        th:nth-of-type(5) {
+
+            .rotate-wrapper {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                position: absolute;
+                justify-content: center;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                padding-bottom: .5rem;
+                text-align: left;
+            }
+
+            .rotate-content {
+                display: block;
+                transform: rotate(-90deg);
+                text-align: left;
+                white-space: nowrap;
+                text-align: left;
+            }
+        }
+
+        tr:not(:last-child) {
+            border-bottom: $border-width solid $color-neutral-light;
+        }
+        
+        th:not(:last-child), td:not(:last-child) {
+            border-right: $border-width solid $color-neutral-light;
+        }
+    }
+}

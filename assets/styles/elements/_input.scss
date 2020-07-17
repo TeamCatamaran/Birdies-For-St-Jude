@@ -1,0 +1,14 @@
+
+input, select, textarea {
+    border: $border-width solid $color-neutral-dark;
+    border-radius: $border-radius;
+    padding: 0 .5rem;
+    font-size: $size-large;
+    line-height: 3.125rem;
+    height: 3.125rem;
+    background-color: white;
+
+    @include placeholder {
+        color: $color-neutral-light;
+    }
+}

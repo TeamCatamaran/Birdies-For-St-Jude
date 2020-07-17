@@ -1,0 +1,64 @@
+
+.about {
+
+    .about-logos {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 1rem 0 3rem;
+
+        img {
+            width: auto;
+            height: auto;
+            max-width: 100%;
+        }
+    }
+
+    h2 {
+        margin-bottom: 2rem;
+    }
+
+    p {
+        font-size: 1.125rem;
+        line-height: 2rem;
+    }
+
+    figure {
+        position: relative;
+        margin-top: 2rem;
+
+        .about-photo {
+            overflow: hidden;
+            border-radius: $border-radius;
+            display: flex;
+            justify-content: flex-end;
+
+            img {
+                position: relative;
+                width: 100%;
+                min-width: 36rem;
+            }
+            
+        }
+
+        .about-course-1 {
+            position: absolute;
+            bottom: 0;
+        }
+
+        .about-course-2 {
+            position: absolute;
+            bottom: 0;
+        }
+
+        figcaption {
+            @include caps;
+            font-family: $font-brand;
+            color: white;
+            position: absolute;
+            bottom: .5rem;
+            right: .5rem;
+        }
+    }
+}

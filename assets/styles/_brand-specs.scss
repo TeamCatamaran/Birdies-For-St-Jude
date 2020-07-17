@@ -1,0 +1,51 @@
+
+// Styles / Brand Specification Sheet
+// -----------------------------------------------------------------------------
+
+
+// Base
+
+$base-size:             16px;
+
+
+// Colors
+
+$color-primary:         #1874dc;
+$color-secondary:       #d21849;
+$color-neutral:         #616161;
+$color-neutral-light:   #d4d4d4;
+$color-neutral-dark:    #000000;
+
+
+// Fonts
+
+@import url("https://use.typekit.net/fpv5xjs.css");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+
+$font-brand:            #{'Rift', sans-serif};
+$font-body:             #{'Open Sans', sans-serif};
+
+$weight-bold:           700;
+$weight-semiBold:       600;
+$weight-regular:        400;
+
+
+// Scale
+
+$size-smallest:         .625rem;
+$size-smaller:          .75rem;
+$size-small:            .875rem;
+
+$size-base:             1rem;
+
+$size-large:            1.25rem;
+$size-larger:           2.25rem;
+$size-largest:          3rem;
+
+
+// Borders
+
+$border-width:          2px;
+$border-color:          $color-neutral-light;
+$border-radius:         .5rem;

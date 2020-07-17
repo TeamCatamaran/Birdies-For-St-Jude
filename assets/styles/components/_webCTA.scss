@@ -1,0 +1,81 @@
+
+.webCTA {
+    display: flex;
+    flex-direction: column-reverse;
+
+    .webCTA-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 4rem;
+        
+        img {
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            margin-bottom: 2rem;
+        }
+
+        p {
+            font-size: $size-large;
+            margin-bottom: 2rem;
+        }
+    }
+
+    .webCTA-wrapper {
+        position: relative;
+        max-width: 32rem;
+        margin: 0 auto;
+
+        figcaption {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+
+        .webCTA-main {
+            width: 100%;
+            position: relative;
+            z-index: 500;
+        }
+
+        .webCTA-course-1 {
+            position: absolute;
+            right: 6%;
+            z-index: 1;
+            bottom: 10%;
+            width: 20%;
+            min-width: 4rem;
+            max-width: 8rem;
+        }
+
+        .webCTA-course-2 {
+            position: absolute;
+            left: calc(-1rem - 6%);
+            top: 35%;
+            width: 30%;
+            min-width: 6rem;
+            max-width: 16rem;
+            z-index: 999;
+        }
+
+        .webCTA-dots-1 {
+            position: absolute;
+            top: 5%;
+            right: 25%;
+            width: 40%;
+            min-width: 4rem;
+            max-width: 16rem;
+        }
+
+        .webCTA-dots-2 {
+            position: absolute;
+            bottom: 10%;
+            left: 10%;
+            width: 40%;
+            min-width: 4rem;
+            max-width: 16rem;
+        }
+    }
+}

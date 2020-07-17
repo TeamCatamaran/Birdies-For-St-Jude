@@ -6,7 +6,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <link href="assets/main.min.css?q=1" rel="stylesheet">
+    <link href="assets/styles/main.css?q=1" rel="stylesheet">
     <link rel="icon" type="image/png" href="assets/img/favicon.png" sizes="16x16">
     <link rel="icon" type="image/png" href="assets/img/favicon32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="assets/img/favicon96.png" sizes="96x96">
@@ -30,36 +30,95 @@
 
 <body itemscope itemtype="https://schema.org/Event">
     <header>
-        <div class="intro">
-            <h1 itemprop="name">Birdies for St. Jude</h1>
-            <p itemprop="description">Join us in the fight against childhood cancer by pledging every birdie #forStJude.</p>
-            <a class="button" href="#leaderboard">Find Your Golfer</a>
-        </div>
-        <div class="banner">
-            <img src="assets/img/logo.png" alt=""/>
-            <dl bd-stats>
-                <dt>Total Birdies</dt>
-                <dd class="-preload" bd-birdie-stats>345</dd>
-                <dt>Est. Total Raised</dt>
-                <dd class="-preload" bd-total-stats>$0</dd>
-            </dl>
-            <a class="button" href="http://catamaran.cc">Pledge</a>
-        </div>
-        <div class="cover">
-            <img src="assets/img/brooksandteam.png" alt="Brooks with St. Jude Patients Calvin, Bridget, Allyson, Reid, Bailey, Quincy, Dakota" />
-            <img src="assets/img/grass-large.jpg" alt="" />
-            <img src="assets/img/course-outline-1.png" alt="" />
-            <img src="assets/img/course-outline-2.png" alt="" />
-            <img src="assets/img/course-outline-3.png" alt="" />
-            <img src="assets/img/dots-1.png" alt="" />
+        <div class="header-wrapper">
+            <div class="intro">
+                <img
+                    alt     = ""
+                    class   = "intro-logo"
+                    src     = "assets/img/logo-stjude.png"
+                    arcset  = "assets/img/logo-stjude.png 1x, assets/img/logo-stjude@2x.png 2x"
+                />
+                <h1 itemprop="name">Birdies for St. Jude</h1>
+                <p itemprop="description">Join us in the fight against childhood cancer by pledging every birdie #forStJude.</p>
+                <a class="button" href="#leaderboard">Find Your Golfer</a>
+                <img
+                    alt     = ""
+                    class   = "intro-arrow"
+                    src     = "assets/img/down-arrow.png"
+                    arcset  = "assets/img/down-arrow.png 1x, assets/img/down-arrow@2x.png 2x"
+                />
+            </div>
+            <div class="banner">
+                <img
+                    alt     = ""
+                    src     = "assets/img/logo-birdies-small.png"
+                    srcset  = "assets/img/logo-birdies-small.png 1x, assets/img/logo-birdies-small@2x.png 2x"
+                />
+                <dl>
+                    <dt>Total Birdies</dt>
+                    <dd class="-preload" bd-birdie-stats>00</dd>
+                    <dt>Est. Raised</dt>
+                    <dd class="-preload" bd-total-stats>$0</dd>
+                </dl>
+                <a class="button" href="http://catamaran.cc">Pledge</a>
+            </div>
+            <figure class="cover">
+                <img
+                    alt     = "Brooks with St. Jude Patients Calvin, Bridget, Allyson, Reid, Bailey, Quincy, Dakota"
+                    class   = "cover-main"
+                    src     = "assets/img/brooksandteam.png"
+                    srcset  = "assets/img/brooksandteam.png 1x, assets/img/brooksandteam@2x.png 2x"
+                />
+    
+                <img
+                    alt     = ""
+                    class   = "cover-grass"
+                    src     = "assets/img/grass.png"
+                    srcset  = "assets/img/grass.png 1x, assets/img/grass@2x.png 2x"
+                />
+                <img
+                    alt     = ""
+                    class   = "cover-course-1"
+                    src     = "assets/img/course-1.png"
+                    srcset  = "assets/img/course-1.png 1x, assets/img/course-1@2x.png 2x"
+                />
+                <img
+                    alt     = ""
+                    class   = "cover-course-2"
+                    src     = "assets/img/course-2.png"
+                    srcset  = "assets/img/course-2.png 1x, assets/img/course-2@2x.png 2x"
+                />
+                <img
+                    alt     = ""
+                    class   = "cover-course-3"
+                    src     = "assets/img/course-3.png"
+                    srcset  = "assets/img/course-3.png 1x, assets/img/course-3@2x.png 2x"
+                />
+                <img
+                    alt     = ""
+                    class   = "cover-dots-1"
+                    src     = "assets/img/dots-1.png"
+                    srcset  = "assets/img/dots-1.png 1x, assets/img/dots-1@2x.png 2x"
+                />
+    
+                <figcaption aria-hidden="true">Brooks with St. Jude Patients Calvin, Bridget, Allyson, Reid, Bailey, Quincy, Dakota</figcaption>
+            </figure>
         </div>
     </header>
     <main>
-        <div class="section" id="about">
+        <div class="section about">
             <div>
-                <div>
-                   <img src="assets/img/logo-birdies.png" alt="" />
-                   <img src="assets/img/logo-stjude.png" alt="" />
+                <div class="about-logos">
+                    <img
+                        alt     = ""
+                        src     = "assets/img/logo-birdies-medium.png"
+                        srcset  = "assets/img/logo-birdies-medium.png 1x, assets/img/logo-birdies-medium@2x.png 2x"
+                    />
+                    <img
+                        alt     = ""
+                        src     = "assets/img/logo-stjude.png"
+                        srcset  = "assets/img/logo-stjude.png 1x, assets/img/logo-stjude@2x.png 2x"
+                    />
                 </div>
                 <h2>Lorem ipsum dolor sit amet</h1>
                 <p itemprop="description">
@@ -81,137 +140,250 @@
                         <span itemprop="name">St. Jude Children's Research Hospital</span></span>. This year a select group of the world's top golfers are raising the stakes by making personal pledges for every birdie they score. This is your chance to get in on the action!
                 </p>
             </div>
-            <div>
-                <img src="assets/img/southwind.jpg" alt="Hole 16, Par 5 at TPC Southwind" />
-                <img src="assets/img/course-outline-4.png" alt="" />
-                <img src="assets/img/course-outline-5.png" alt="" />
-            </div>
+            <figure>
+                <div class   = "about-photo">
+                    <img
+                        alt     = "Southwind"
+                        src     = "assets/img/southwind.png"
+                        srcset  = "assets/img/southwind.png 1x, assets/img/southwind@2x.png 2x"
+                    />
+                </div>
+                <img
+                    alt     = ""
+                    class   = "about-course-1"
+                    src     = "assets/img/course-4.png"
+                    srcset  = "assets/img/course-4.png 1x, assets/img/course-4@2x.png 2x"
+                />
+                <img
+                    alt     = ""
+                    class   = "about-course-2"
+                    src     = "assets/img/course-5.png"
+                    srcset  = "assets/img/course-5.png 1x, assets/img/course-5@2x.png 2x"
+                />
+                <figcaption>Hole 16, Par 5 at TPC Southwind</figcaption>
+            </figure>
         </div>
-        <div class="section" id="leaderboard">
-            <h2>Leaderboard</h2>
-            <div>
-                <span>
-                    <i class="icon-search" aria-hidden="true" />
-                    <input type="search" aria-label="Find Your Golfer" />
-                </span>
-                <span>
+        <div class="section leaderboard" id="leaderboard">
+            <h2>Golfer Leaderboard</h2>
+            <div class="leaderboard-controls">
+                <div class="leaderboard-search">
+                    <img
+                        class       = "icon-search"
+                        alt         = ""
+                        src         = "assets/img/icon-search.png"
+                        srcset      = "assets/img/icon-search.png 1x, assets/img/icon-search@2x.png 2x"
+                    />
+                    <input id="search" type="search" aria-label="Find Your Golfer" required/>
+                    <label for="search">Find Your Golfer</label>
+                </div>
+                <div class="leaderboard-sort">
                     <select name="Sort by">
-                        <option vale="Option A">Option A</option>
-                        <option vale="Option B">Option B</option>
-                        <option vale="Option C">Option C</option>
+                        <option vale="" disabled selected>Sort By</option>
+                        <option vale="Option A">Rank</option>
+                        <option vale="Option B">Birdies</option>
+                        <option vale="Option C">Total Raised</option>
                     </select>
-                    <i class="icon-caretDown" aria-hidden="true" />
-                </span>
+                    <img
+                        class   = "icon-downArrow"
+                        alt     = ""
+                        src     = "assets/img/down-arrow.png"
+                        srcset  = "assets/img/down-arrow.png 1x, assets/img/down-arrow@2x.png 2x"
+                    />
+                </div>
             </div>
-            <table>
-                <tr>
-                    <th scope="col">Rank</th>
-                    <th scope="col">Golfer</th>
-                    <th scope="col">Birdies</th>
-                    <th scope="col">Est Raised</th>
-                    <th scope="col">Join</th>
-                </tr>
-                <tr itemprop="performer" itemscope itemtype="https://schema.org/Person" bd-slug="thomas-birdies"
-                    bd-name="Thomas, Justin">
-                    <td>1</td>
-                    <td scope="row" itemprop="name">Thomas, Justin</td>
-                    <td class="-preload" bd-performance>0</td>
-                    <td class="-preload" bd-amount>$0</td>
-                    <td>
-                        <a class="-preload" target="_blank" rel="noopener noreferrer"
-                            onclick="gtag('event', 'click', {'event_category': 'Pledge Button', 'event_label': 'Thomas, Justin'});"
-                            bd-donate href="#">Pledge</a>
-                    </td>
-                </tr>
-                <tr itemprop="performer" itemscope itemtype="https://schema.org/Person">
-                    <td>1</td>
-                    <td scope="row" itemprop="name">Koepka, Brooks</td>
-                    <td>345</td>
-                    <td>$13,475</td>
-                    <td>
-                        <a href="http://catamaran.cc">Pledge</a>
-                    </td>
-                </tr>
-                <tr itemprop="performer" itemscope itemtype="https://schema.org/Person">
-                    <td>1</td>
-                    <td scope="row" itemprop="name">Koepka, Brooks</td>
-                    <td>345</td>
-                    <td>$13,475</td>
-                    <td>
-                        <a href="http://catamaran.cc">Pledge</a>
-                    </td>
-                </tr>
-            </table>
+            <div class="leaderboard-table">
+                <table>
+                    <tr>
+                        <th scope="col">
+                            <span class="rotate-wrapper">
+                                <span class="rotate-content">Rank</span>
+                            </span>
+                        </th>
+                        <th scope="col">
+                            <span class="rotate-none">
+                                Golfer
+                            </span>
+                        </th>
+                        <th scope="col">
+                            <span class="rotate-wrapper">
+                                <span class="rotate-content">Birdies</span>
+                            </span>
+                        </th>
+                        <th scope="col">
+                            <span class="rotate-wrapper">
+                                <span class="rotate-content">Est. Raised</span>
+                            </span>
+                        </th>
+                        <th scope="col">
+                            <span class="rotate-wrapper">
+                                <span class="rotate-content">Join</span>
+                            </span>
+                        </th>
+                    </tr>
+                    <tr itemprop="performer" itemscope itemtype="https://schema.org/Person" bd-slug="thomas-birdies"
+                        bd-name="Thomas, Justin">
+                        <td>1</td>
+                        <td scope="row" itemprop="name">Thomas, Justin</td>
+                        <td class="-preload" bd-performance>0</td>
+                        <td class="-preload" bd-amount>$0</td>
+                        <td>
+                            <a class="button -preload" target="_blank" rel="noopener noreferrer"
+                                onclick="gtag('event', 'click', {'event_category': 'Pledge Button', 'event_label': 'Thomas, Justin'});"
+                                bd-donate href="#">Pledge</a>
+                        </td>
+                    </tr>
+                    <tr itemprop="performer" itemscope itemtype="https://schema.org/Person" bd-slug="thomas-birdies"
+                        bd-name="Thomas, Justin">
+                        <td>1</td>
+                        <td scope="row" itemprop="name">Thomas, Justin</td>
+                        <td class="-preload" bd-performance>0</td>
+                        <td class="-preload" bd-amount>$0</td>
+                        <td>
+                            <a class="button -preload" target="_blank" rel="noopener noreferrer"
+                                onclick="gtag('event', 'click', {'event_category': 'Pledge Button', 'event_label': 'Thomas, Justin'});"
+                                bd-donate href="#">Pledge</a>
+                        </td>
+                    </tr>
+                    <tr itemprop="performer" itemscope itemtype="https://schema.org/Person" bd-slug="thomas-birdies"
+                        bd-name="Thomas, Justin">
+                        <td>1</td>
+                        <td scope="row" itemprop="name">Thomas, Justin</td>
+                        <td class="-preload" bd-performance>0</td>
+                        <td class="-preload" bd-amount>$0</td>
+                        <td>
+                            <a class="button -preload" target="_blank" rel="noopener noreferrer"
+                                onclick="gtag('event', 'click', {'event_category': 'Pledge Button', 'event_label': 'Thomas, Justin'});"
+                                bd-donate href="#">Pledge</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
             <button>See More</button>
         </div>
-        <div>
-            <div>
-                <img src="assets//img/logo-stjude.png" alt="" />
+        <div class="section webCTA">
+            <div class="webCTA-content">
+                <img src="assets//img/logo-stjude-tagline.png" alt="" />
                 <h2>Finding Cures. Saving Children<sup>&#174;</sup>.</h2>
                 <p>That's something we can all agree on. Learn how St. Jude is leading the way the world understands, treats, and defeats childhood cancer and other life-threatening diseases.</p>
                 <a class="button" href="http://catamaran.cc">Visit stjude.org</a>
             </div>
-            <div>
-                <img src="assets/img/justin.jpg" alt="Justin with patient Dakota" />
-                <img src="assets/img/course-outline-6.png" alt="" />
-                <img src="assets/img/course-outline-7.png" alt="" />
-                <img src="assets/img/dots-2.png" alt="" />
-                <img src="assets/img/dots-3.png" alt="" />
-            </div>
-
+            <figure class="webCTA-wrapper">
+                <img
+                    alt     = "Justin with patient Dakota"
+                    class   = "webCTA-main"
+                    src     = "assets/img/justin.png"
+                    srcset  = "assets/img/justin.png 1x, assets/img/justin@2x.png 2x"
+                />
+                <img
+                    alt     = ""
+                    class   = "webCTA-course-1"
+                    src     = "assets/img/course-6.png"
+                    srcset  = "assets/img/course-6.png 1x, assets/img/course-6@2x.png 2x"
+                />
+                <img
+                    alt     = ""
+                    class   = "webCTA-course-2"
+                    src     = "assets/img/course-7.png"
+                    srcset  = "assets/img/course-7.png 1x, assets/img/course-7@2x.png 2x"
+                />
+                <img
+                    alt     = ""
+                    class   = "webCTA-dots-1"
+                    src     = "assets/img/dots-2.png"
+                    srcset  = "assets/img/dots-2.png 1x, assets/img/dots-2@2x.png 2x"
+                />
+                <img
+                    alt     = ""
+                    class   = "webCTA-dots-2"
+                    src     = "assets/img/dots-3.png"
+                    srcset  = "assets/img/dots-3.png 1x, assets/img/dots-3@2x.png 2x"
+                />
+                <figcaption aria-hidden="true">Justin with patient Dakota</figcaption>
+            </figure>
+            
         </div>
-        <div class="layout-2col">
-            <div class="callout">
-                <h2>Lorem ipsum dolor sit amet</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, nisi sit! Iure, earum ullam ducimus vero, natus quis illum aliquam ratione obcaecati quisquam quibusdam eaque alias dolor.</p>
-                <a class="button" href="http://catamaran.cc">Go to auction</a>
-                <img src="assets/img/contour-lines-1" alt="" />
-            </div>
-            <div class="callout">
-                <h2>Thank you to our sponsors</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, nisi sit! Iure, earum ullam ducimus vero, natus quis illum aliquam ratione obcaecati quisquam quibusdam eaque alias dolor.</p>
-                <ul>
-                    <li>
-                        <img stc="assets/img/logo-pga.png" alt="PGA Tour" />
-                    </li>
-                    <li>
-                        <img stc="assets/img/logo-wgc.png" alt="World Golf Championships" />
-                    </li>
-                    <li>
-                        <img stc="assets/img/logo-invite.png" alt="FedEx St. Jude Invitational" />
-                    </li>
-                </ul>
-                <img src="assets/img/contour-lines-2" alt="" />
+        <div class="section callouts">
+            <div class="callouts-wrapper">
+                <div class="callout">
+                    <h2>Lorem ipsum dolor sit amet</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, nisi sit! Iure, earum ullam ducimus vero, natus quis illum aliquam ratione obcaecati quisquam quibusdam eaque alias dolor.</p>
+                    <a class="button" href="http://catamaran.cc">Go to auction</a>
+                    <img
+                        alt     = ""
+                        class   = "callout-topo-1"
+                        src     = "assets/img/topo-1.png"
+                        srcset  = "assets/img/topo-1.png 1x, assets/img/topo-1@2x.png 2x"
+                    />
+                </div>
+                <div class="callout">
+                    <h2>Thank you to our sponsors</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, nisi sit! Iure, earum ullam ducimus vero, natus quis illum aliquam ratione obcaecati quisquam quibusdam eaque alias dolor.</p>
+                    <ul>
+                        <li>
+                            <img
+                                alt     = "PGA Tour"
+                                src     = "assets/img/logo-pga.png"  
+                                srcset  = "assets/img/logo-pga.png 1x, assets/img/logo-pga@2x.png 2x"
+                            />
+                        </li>
+                        <li>
+                            <img
+                                alt     = "World Golf Championships-FedEx St. Jude Invitational"
+                                src     = "assets/img/logo-wgc.png"  
+                                srcset  = "assets/img/logo-wgc.png 1x, assets/img/logo-wgc@2x.png 2x"
+                            />
+                        </li>
+                    </ul>
+                    <img
+                        alt     = ""
+                        class   = "callout-topo-2"
+                        src     = "assets/img/topo-2.png"
+                        srcset  = "assets/img/topo-2.png 1x, assets/img/topo-2@2x.png 2x"
+                    />
+                </div>
             </div>
         </div>
     </main>
     <footer>
-        <div >
-            <p>St. Jude is leading the way the world understands, treats, and defeats childhood cancer and other life-threatening diseases.</p>
-            <div class="follow">
-                <ul>
-                    <li>
-                        <a href="http://catamaran.cc">
-                            <img src="assets/img/logo-facebook.png" alt="Follow us on Facebook" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://catamaran.cc">
-                            <img src="assets/img/logo-twitter.png" alt="Follow us on Twitter" />
-                        </a>
-                    </li>
-                </ul>
+        <div class="stjude">
+            <div class="footer-wrapper">
+                <p>St. Jude is leading the way the world understands, treats, and defeats childhood cancer and other life-threatening diseases.</p>
+                <div class="follow">
+                    <img src="assets/img/logo-stjude.png"/>
+                    <ul class="socials">
+                        <li>
+                            <a href="http://catamaran.cc">
+                                <img src="assets/img/logo-facebook.png" alt="Follow us on Facebook" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://catamaran.cc">
+                                <img src="assets/img/logo-twitter.png" alt="Follow us on Twitter" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <img src="assets/img/logo-stjude.png"/>
         </div>
-        <div>
-            <img src="assets/img/logo-pledge.png" alt="Powered by Pledge It" />
-            <p>PLEDGE IT is the leading performance-based fundraising website. We believe support for a cause is earned, not given. Our community of athletes are inspired to earn the change they want to see in the world! Join the movement at <a href="http://wwww.pledgeit.org">pledgeit.org</a>.</p>
-            <p>2020 Pledge Platform, LLC. Trademarks are the property of their respective owners. All rights reserved. All company, organization and product names, tradename, and logos are trademarks &trade; or registered &reg; trademarks of their respective holders. Use of such trademarks does not imply any affiliation with or endorsement by the trademark owners.</p>
-            <a href="http://catamaran.cc" target="_blank">
-                <span>Site By</span>
-                <img src="assets/img/logo-catamaran.png" alt="Catamaran" />
-            </a>
+        <div class="credits">
+            <div class="footer-wrapper">
+                <div class="credits-pledgeItLogo">
+                    <img
+                        alt     = "Powered by Pledge It"
+                        src     = "assets/img/logo-pledgeit.png"
+                        srcset  = "assets/img/logo-pledgeit.png 1x, assets/img/logo-pledgeit@2x.png 2x"
+                    />
+                </div>
+                <div class="credits-content">
+                    <p class="pitch">PLEDGE IT is the leading performance-based fundraising website. We believe support for a cause is earned, not given. Our community of athletes are inspired to earn the change they want to see in the world! Join the movement at <a href="http://wwww.pledgeit.org">pledgeit.org</a>.</p>
+                    <p class="terms">2020 Pledge Platform, LLC. Trademarks are the property of their respective owners. All rights reserved. All company, organization and product names, tradename, and logos are trademarks &trade; or registered &reg; trademarks of their respective holders. Use of such trademarks does not imply any affiliation with or endorsement by the trademark owners.</p>
+                </div>
+                <div class="credits-catamaranLogo">
+                    <a href="http://catamaran.cc" target="_blank">
+                        <img src="assets/img/logo-catamaran.png" alt="Site By Catamaran" />
+                    </a>
+                </div>
+            </div>
         </div>
     </footer>
 

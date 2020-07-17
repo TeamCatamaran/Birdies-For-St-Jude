@@ -1,0 +1,81 @@
+.callouts {
+    
+    .callouts-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -1rem;
+    }
+
+    .callout {
+        border-radius: $border-radius;
+        position: relative;
+        overflow: hidden;
+        padding: 2rem;
+        margin: 1rem;
+        flex-basis: 26rem;
+        flex-grow: 1;
+        min-width: 16rem;
+
+        h2, p, .button {
+            position: relative;
+            z-index: 999;
+        }
+
+        h2 {
+            margin-bottom: 2rem;
+        }
+
+        p {
+            font-size: $size-large;
+            margin-bottom: 2rem;
+        }
+
+        &:first-child {
+            background-color: $color-primary;
+
+            h2 {
+                color: white;
+            }
+
+            p {
+                color: white;
+            }
+
+            .button {
+                background-color: white;
+                color: $color-primary;
+            }
+        }
+
+        &:last-child {
+            background-color: $color-neutral-light;
+
+            ul {
+                list-style: none;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+
+                li {
+                    margin: 0 1rem;
+                }
+            }
+        }
+    }
+
+    .callout-topo-1 {
+        position: absolute;
+        top: -2rem;
+        left: -2rem;
+        width: calc(100% + 4rem);
+        max-width: 32rem;
+        z-index: 0;
+    }
+
+    .callout-topo-2 {
+        position: absolute;
+        bottom: -2rem;
+        right: -2rem;
+        z-index: 0;
+    }
+}

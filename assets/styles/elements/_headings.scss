@@ -1,0 +1,14 @@
+h1, h2 {
+    @include caps;
+    color: $color-primary;
+    font-family: $font-brand;
+    line-height: 1;
+}
+
+h1 {
+    font-size: $size-largest;
+}
+
+h2 {
+    font-size: $size-larger
+}

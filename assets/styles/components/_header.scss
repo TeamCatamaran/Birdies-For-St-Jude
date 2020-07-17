@@ -1,0 +1,144 @@
+
+header {    
+    .header-wrapper {
+        max-width: 68rem;
+        margin: 0 auto;
+        display: flex;
+        position: relative;
+        flex-direction: column-reverse;
+        align-items: stretch;
+        justify-content: flex-end;
+    }
+
+    .intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        h1 {
+            margin: 0 4rem;
+        }
+
+        p {
+            font-size: $size-large;
+            margin: 1rem 1rem 2rem;
+            letter-spacing: .05em;
+            line-height: 1.5;
+        }
+
+        .intro-logo {
+            margin: 2rem 0 1rem;
+        }
+
+        .intro-arrow {
+            margin: 3rem;
+        }
+    }
+
+    .banner {
+        background-color: white;
+        border-radius: $border-radius;
+        box-shadow: 0px 0px 3rem 0px rgba(32, 35, 35, 0.1);
+        position: absolute;
+        top: .5rem;
+        left: .5rem;
+        right: .5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: .5rem;
+        align-items: center;
+        z-index: 999;
+        height: 4rem;
+        width: calc(100% - 1rem);
+
+        dl {
+            display: flex;
+            flex-direction: column-reverse;
+
+            dt {
+                @include caps;
+                color: $color-neutral;
+                font-size: $size-smaller;
+                font-weight: $weight-bold;
+            }
+
+            dd {
+                font-family: $font-body;
+                color: $color-primary;
+                font-size: $size-base;
+                font-weight: $weight-semiBold;
+            }
+
+            dt:first-of-type, dd:first-of-type {
+                display: none;
+            }
+        }
+    }
+
+    .cover {
+        overflow: hidden;
+        position: relative;
+        padding-bottom: 8rem;
+
+        figcaption {
+            position: relative;
+            width: 50%;
+            max-width: 11rem;
+            left: 1rem;
+            bottom: -6.5rem;
+            z-index: 999;
+        }
+
+        .cover-main {
+            display: block;
+            position: relative;
+            left: 4rem;
+            right: 0;
+            max-width: calc(100% - 3rem);
+            top: 7rem;
+            z-index: 999;
+        }
+
+        .cover-grass {
+            width: 100%;
+            min-width: 34rem;
+            height: auto;
+            position: absolute;
+            left: 4rem;
+            top: -6rem;
+            z-index: 500;
+            
+        }
+
+        .cover-course-1 {
+            position: absolute;
+            left: 6rem;
+            top: 3rem;
+            width: 5rem;
+        }
+
+        .cover-course-2 {
+            position: absolute;
+            right: 3rem;
+            top: 5.5rem;
+            width: 12rem;
+            z-index: 501;
+        }
+
+        .cover-course-3 {
+            position: absolute;
+            right: .5rem;
+            bottom: 4rem;
+            width: 12rem;
+        }
+
+        .cover-dots-1 {
+            position: absolute;
+            left: 6rem;
+            bottom: 4.25rem;
+            width: 8rem;
+        }
+    }
+}

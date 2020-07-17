@@ -1,0 +1,33 @@
+
+@import "brand-specs",
+        "mixins/_mixins";
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    font-family: $font-body;
+
+    &:before, &:after {
+        box-sizing: inherit;
+    }
+}
+
+html, body {
+    font-size: $base-size;
+    font-family: $font-body;
+    color: $color-neutral;
+}
+
+img {
+    display: block;
+}
+
+
+@import "elements/_elements",
+        "components/_components";

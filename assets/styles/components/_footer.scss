@@ -1,0 +1,135 @@
+footer {
+    .footer-wrapper {
+        width: 100%;
+        max-width: 68rem;
+        margin: 0 auto;
+        padding: 1.5rem;
+    }
+
+    .stjude {
+        background-color: $color-secondary;
+        display: flex;
+        flex-direction: column;
+        padding: 3rem 2rem;
+
+        .follow {
+            order: 1;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .socials {
+                list-style: none;
+                display: flex;
+                align-items: center;
+                margin: -.5rem;
+                position: relative;
+                min-width: 8rem;
+
+                &:before {
+                    position: absolute;
+                    top: .5rem;
+                    left: .5rem;
+                    @include caps;
+                    content: "Follow Us";
+                    color: white;
+                    font-family: $font-brand;
+                }
+
+                li {
+                    margin: .5rem;
+                }
+            }
+        }
+
+        p {
+            order: 2;
+            color: white;
+            font-size: 1.5rem;
+            flex-grow: 1;
+            min-width: 24rem;
+        }
+    }
+
+    .credits {
+        background-color: $color-neutral-dark;
+        padding: 3rem 2rem;
+
+        .footer-wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .credits-pledgeItLogo {
+            width: 100%;
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .credits-content {
+            display: flex;
+            flex-direction: column;
+
+            @media (min-width: 64rem) {
+                flex-direction: row;
+            }
+        }
+
+        .credits-catamaranLogo {
+            width: 100%;
+            margin-top: 2rem;
+            display: flex;
+
+            @media (min-width: 68rem) {
+                margin-top: 0;
+                justify-content: flex-end;
+            }
+
+            a {
+                display: block;
+                position: relative;
+                left: 0;
+                opacity: .33;
+                transition: opacity .16s ease-in-out;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+
+        p {
+            width: 100%;
+            color: rgba(255,255,255,.5);
+
+            a {
+                color: white;
+                opacity: .5;
+                transition: opacity .16s ease-in-out;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+
+            &.pitch {
+                font-size: $size-large;
+                line-height: 2rem;
+                max-width: 36rem;
+            }
+
+            &.terms {
+                font-family: $font-brand;
+                line-height: 1.2;
+                margin-top: 2rem;
+                max-width: 32rem;
+
+                @media (min-width: 68rem) {
+                    margin-top: .5rem;
+                    text-align: right;
+                    padding-left: 4rem;
+                }
+            }
+        }
+    }
+}
