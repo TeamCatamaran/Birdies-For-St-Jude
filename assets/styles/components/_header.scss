@@ -4,10 +4,10 @@ header {
         max-width: 68rem;
         margin: 0 auto;
         display: flex;
-        position: relative;
         flex-direction: column-reverse;
         align-items: stretch;
         justify-content: flex-end;
+        margin-bottom: 15%;
     }
 
     .intro {
@@ -42,8 +42,6 @@ header {
         box-shadow: 0px 0px 3rem 0px rgba(32, 35, 35, 0.1);
         position: absolute;
         top: .5rem;
-        left: .5rem;
-        right: .5rem;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -52,52 +50,77 @@ header {
         z-index: 999;
         height: 4rem;
         width: calc(100% - 1rem);
+        max-width: 68rem;
+        margin: 0 auto;
 
-        dl {
+        .banner-stats {
             display: flex;
-            flex-direction: column-reverse;
+            
 
-            dt {
-                @include caps;
+            .stat-label {
+                text-transform: uppercase;
+                letter-spacing: .15em;
+                font-family: $font-brand;
                 color: $color-neutral;
                 font-size: $size-smaller;
                 font-weight: $weight-bold;
             }
 
-            dd {
+            .stat-value {
                 font-family: $font-body;
                 color: $color-primary;
                 font-size: $size-base;
                 font-weight: $weight-semiBold;
+                
             }
 
-            dt:first-of-type, dd:first-of-type {
-                display: none;
+            @media (max-width: 36rem) {
+                p {
+                    display: flex;
+                    flex-direction: column-reverse;
+                }
+
+                p:first-of-type {
+                    display: none;
+                }
+            }
+
+            @media (min-width: 36rem) {
+                align-items: center;
+                justify-content: space-evenly;
+                flex-grow: 1;
+                
+                .stat-label, .stat-value {
+                    margin: .25rem;
+                }
             }
         }
     }
 
     .cover {
-        overflow: hidden;
+        overflow: visible;
         position: relative;
         padding-bottom: 8rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-bottom: 10%;
 
         figcaption {
-            position: relative;
+            position: absolute;
             width: 50%;
-            max-width: 11rem;
+            max-width: 12rem;
             left: 1rem;
-            bottom: -6.5rem;
+            bottom: -2rem;
             z-index: 999;
         }
 
         .cover-main {
             display: block;
             position: relative;
-            left: 4rem;
             right: 0;
-            max-width: calc(100% - 3rem);
-            top: 7rem;
+            width: 90%;
+            top: 8rem;
             z-index: 999;
         }
 
@@ -114,31 +137,67 @@ header {
 
         .cover-course-1 {
             position: absolute;
-            left: 6rem;
-            top: 3rem;
-            width: 5rem;
+            left: 15%;
+            top: 15%;
+            width: 18%;
+            max-width: 243px;
         }
 
         .cover-course-2 {
             position: absolute;
-            right: 3rem;
-            top: 5.5rem;
-            width: 12rem;
+            right: 22%;
+            top: 8%;
+            width: 45%;
             z-index: 501;
+            max-width: 852px;
         }
 
         .cover-course-3 {
             position: absolute;
-            right: .5rem;
-            bottom: 4rem;
-            width: 12rem;
+            right: 8%;
+            bottom: -2%;
+            width: 45%;
+            max-width: 735px;
         }
 
         .cover-dots-1 {
             position: absolute;
-            left: 6rem;
-            bottom: 4.25rem;
-            width: 8rem;
+            left: 8%;
+            bottom: 6%;
+            width: 30%;
+            max-width: 447px;
+        }
+    }
+
+    @media (min-width: 68rem) {
+        .header-wrapper {
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+        
+        .intro {
+            width: 50%;
+            padding-top: 6rem;
+            text-align: left;
+            align-items: flex-start;
+
+            h1 {
+                margin: 0;
+            }
+
+            p {
+                margin-left: 0;
+            }
+
+            .intro-arrow {
+                margin-left: 0;
+            }
+        }
+
+        .cover {
+            position: absolute;
+            left: 50%;
+            right: 0;
         }
     }
 }

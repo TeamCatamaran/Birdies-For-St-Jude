@@ -14,4 +14,10 @@ button, .button {
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color .16s ease-in-out;
+
+    &:hover {
+        background-color: lighten($color-primary, 10%);
+    }
 }

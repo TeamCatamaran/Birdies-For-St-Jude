@@ -1,17 +1,22 @@
 
 .leaderboard {
 
+    h2 {
+        margin-bottom: 3rem;
+    }
+
     .leaderboard-controls {
         display: flex;
         flex-direction: column;
         position: relative;
-        margin-top: 3rem;
+        margin: -.5rem;
 
         .leaderboard-search {
             display: flex;
             flex-direction: row;
             align-items: center;
             position: relative;
+            margin: .5rem;
 
             .icon-search {
                 position: absolute;
@@ -40,10 +45,10 @@
             flex-direction: row;
             align-items: center;
             position: relative;
+            margin: .5rem;
 
             select {
                 width: 100%;
-                margin-top: 1rem;
                 color: rgba(0,0,0,.5);
                 padding-right: 1rem;
 
@@ -55,8 +60,20 @@
             .icon-downArrow {
                 position: absolute;
                 right: 1rem;
-                margin-top: .5rem;
                 pointer-events: none;
+            }
+        }
+
+        @media (min-width: 40rem) {
+            flex-direction: row;
+            justify-content: space-between;
+
+            .leaderboard-search {
+                width: 24rem;
+            }
+            
+            .leaderboard-sort {
+                width: 24rem;
             }
         }
     }
@@ -97,11 +114,23 @@
             text-overflow: ellipsis;
         }
 
-            // Hide some columns on smaller screens
-        th:nth-of-type(1), td:nth-of-type(1),
-        th:nth-of-type(3), td:nth-of-type(3) {
-            display: none;
+        // Hide some columns on smaller screens
+        @media (max-width: 68rem) {
+            th:nth-of-type(1), td:nth-of-type(1),
+            th:nth-of-type(3), td:nth-of-type(3) {
+                display: none;
+            }
         }
+
+        th:nth-of-type(2), td:nth-of-type(2) {
+            text-align: left;
+            padding-left: 1rem;
+        }
+
+        th:nth-of-type(5), td:nth-of-type(5) {
+            width: 8rem;
+        }
+        
 
         th:nth-of-type(1),
         th:nth-of-type(3),

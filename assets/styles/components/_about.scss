@@ -6,7 +6,8 @@
         flex-direction: row;
         justify-content: space-evenly;
         align-items: center;
-        margin: 1rem 0 3rem;
+        margin: 1rem auto 3rem;
+        max-width: 32rem;
 
         img {
             width: auto;
@@ -24,7 +25,7 @@
         line-height: 2rem;
     }
 
-    figure {
+    .about-figure {
         position: relative;
         margin-top: 2rem;
 
@@ -39,17 +40,22 @@
                 width: 100%;
                 min-width: 36rem;
             }
-            
         }
 
         .about-course-1 {
             position: absolute;
-            bottom: 0;
+            top: 10%;
+            right: 12%;
+            width: 28%;
+            min-width: 9rem;
         }
 
         .about-course-2 {
             position: absolute;
-            bottom: 0;
+            bottom: -15%;
+            left: 5%;
+            width: 28%;
+            min-width: 9rem;
         }
 
         figcaption {
@@ -59,6 +65,7 @@
             position: absolute;
             bottom: .5rem;
             right: .5rem;
+            opacity: 1;
         }
     }
 }

@@ -4,4 +4,8 @@
     padding: 1.5rem;
     margin: 0 auto 4rem;
     max-width: 68rem;
+
+    @media (min-width: 68rem) {
+        margin-top: 8rem;
+    }
 }

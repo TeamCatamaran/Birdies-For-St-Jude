@@ -54,12 +54,16 @@
                     src     = "assets/img/logo-birdies-small.png"
                     srcset  = "assets/img/logo-birdies-small.png 1x, assets/img/logo-birdies-small@2x.png 2x"
                 />
-                <dl>
-                    <dt>Total Birdies</dt>
-                    <dd class="-preload" bd-birdie-stats>00</dd>
-                    <dt>Est. Raised</dt>
-                    <dd class="-preload" bd-total-stats>$0</dd>
-                </dl>
+                <div class="banner-stats">
+                    <p>
+                        <span class="stat-label">Total Birdies</span>
+                        <span class="stat-value -preload" bd-birdie-stats>00</span>
+                    </p>
+                    <p>
+                        <span class="stat-label">Est. Raised</span>
+                        <span class="stat-value -preload" bd-total-stats>$0</span>
+                    </p>
+                </div>
                 <a class="button" href="http://catamaran.cc">Pledge</a>
             </div>
             <figure class="cover">
@@ -107,7 +111,7 @@
     </header>
     <main>
         <div class="section about">
-            <div>
+            <div class="about-content">
                 <div class="about-logos">
                     <img
                         alt     = ""
@@ -140,7 +144,7 @@
                         <span itemprop="name">St. Jude Children's Research Hospital</span></span>. This year a select group of the world's top golfers are raising the stakes by making personal pledges for every birdie they score. This is your chance to get in on the action!
                 </p>
             </div>
-            <figure>
+            <figure class="about-figure">
                 <div class   = "about-photo">
                     <img
                         alt     = "Southwind"
@@ -349,16 +353,28 @@
             <div class="footer-wrapper">
                 <p>St. Jude is leading the way the world understands, treats, and defeats childhood cancer and other life-threatening diseases.</p>
                 <div class="follow">
-                    <img src="assets/img/logo-stjude.png"/>
+                    <img
+                        alt     = ""
+                        src     = "assets/img/logo-stjude-reverse.png"
+                        srcset  = "assets/img/logo-stjude-reverse.png 1x, assets/img/logo-stjude-reverse@2x.png 2x"
+                    />
                     <ul class="socials">
                         <li>
                             <a href="http://catamaran.cc">
-                                <img src="assets/img/logo-facebook.png" alt="Follow us on Facebook" />
+                                <img
+                                    alt     = "Follow us on Facebook"
+                                    src     = "assets/img/logo-facebook.png"
+                                    srcset  = "assets/img/logo-facebook.png 1x, assets/img/logo-facebook@2x.png 2x"
+                                />
                             </a>
                         </li>
                         <li>
                             <a href="http://catamaran.cc">
-                                <img src="assets/img/logo-twitter.png" alt="Follow us on Twitter" />
+                                <img
+                                    alt     = "Follow us on Twiitter"
+                                    src     = "assets/img/logo-twitter.png"
+                                    srcset  = "assets/img/logo-twitter.png 1x, assets/img/logo-twitter@2x.png 2x"
+                                />
                             </a>
                         </li>
                     </ul>
@@ -380,7 +396,11 @@
                 </div>
                 <div class="credits-catamaranLogo">
                     <a href="http://catamaran.cc" target="_blank">
-                        <img src="assets/img/logo-catamaran.png" alt="Site By Catamaran" />
+                        <img
+                            alt     = "Site By Catamaran"
+                            src     = "assets/img/logo-catamaran.png"
+                            srcset  = "assets/img/logo-catamaran.png 1x, assets/img/logo-catamaran@2x.png 2x"
+                        />
                     </a>
                 </div>
             </div>

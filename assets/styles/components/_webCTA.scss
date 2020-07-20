@@ -15,6 +15,10 @@
 
         h2 {
             margin-bottom: 2rem;
+
+            sup {
+                font-family: $font-brand;
+            }
         }
 
         p {
@@ -30,8 +34,8 @@
 
         figcaption {
             position: absolute;
-            left: 0;
-            bottom: 0;
+            left: 10%;
+            bottom: 5%;
         }
 
         .webCTA-main {
@@ -71,11 +75,29 @@
 
         .webCTA-dots-2 {
             position: absolute;
-            bottom: 10%;
+            bottom: 12%;
             left: 10%;
-            width: 40%;
+            width: 35%;
             min-width: 4rem;
             max-width: 16rem;
+        }
+    }
+
+    @media (min-width: 68rem) {
+        flex-direction: row-reverse;
+
+        .webCTA-content {
+            text-align: left;
+            align-items: flex-start;
+            margin-top: 0;
+            width: 50%;
+        }
+
+        .webCTA-wrapper {
+            width: 50%;
+            max-width: 50%;
+            margin-right: 6rem;
+            margin-top: 4rem;
         }
     }
 }

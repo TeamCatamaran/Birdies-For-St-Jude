@@ -8,46 +8,71 @@ footer {
 
     .stjude {
         background-color: $color-secondary;
-        display: flex;
-        flex-direction: column;
         padding: 3rem 2rem;
 
+        .footer-wrapper {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
         .follow {
-            order: 1;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+            align-items: center;
+        }
 
-            .socials {
-                list-style: none;
-                display: flex;
-                align-items: center;
-                margin: -.5rem;
-                position: relative;
-                min-width: 8rem;
+        .socials {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            margin: -.5rem;
+            position: relative;
+            min-width: 8rem;
+            padding-top: 1.5rem;
 
-                &:before {
-                    position: absolute;
-                    top: .5rem;
-                    left: .5rem;
-                    @include caps;
-                    content: "Follow Us";
-                    color: white;
-                    font-family: $font-brand;
-                }
+            &:before {
+                position: absolute;
+                top: -.5rem;
+                left: .75rem;
+                @include caps;
+                content: "Follow Us";
+                color: white;
+                font-family: $font-brand;
+            }
 
-                li {
-                    margin: .5rem;
-                }
+            li {
+                margin: 0 .75rem;
             }
         }
 
         p {
-            order: 2;
             color: white;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             flex-grow: 1;
             min-width: 24rem;
+            margin-top: 2rem;
+        }
+
+        @media (min-width: 68rem) {
+            .footer-wrapper {
+                flex-direction: row-reverse;
+                align-items: center;
+            }
+
+            .follow {
+                border-right: $border-width solid white;
+                padding-right: 2rem;
+                margin-right: 3rem;
+            }
+
+            .socials {
+                margin-left: 3rem;
+            }
+
+            p {
+                margin-top: 0;
+            }
         }
     }
 
@@ -124,7 +149,7 @@ footer {
                 margin-top: 2rem;
                 max-width: 32rem;
 
-                @media (min-width: 68rem) {
+                @media (min-width: 64rem) {
                     margin-top: .5rem;
                     text-align: right;
                     padding-left: 4rem;
