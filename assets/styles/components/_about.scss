@@ -67,5 +67,15 @@
             right: .5rem;
             opacity: 1;
         }
+
+        @media (min-width: 75rem) {
+            .about-course-1 {
+                top: calc(10% + 8rem);
+            }
+
+            .about-course-2 {
+                bottom: calc(-15% - 20rem);
+            }
+        }
     }
 }

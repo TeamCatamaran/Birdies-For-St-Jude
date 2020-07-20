@@ -152,6 +152,12 @@ dl {
   right: .5rem;
   opacity: 1; }
 
+@media (min-width: 75rem) {
+  .about .about-figure .about-course-1 {
+    top: calc(10% + 8rem); }
+  .about .about-figure .about-course-2 {
+    bottom: calc(-15% - 20rem); } }
+
 .callouts .callouts-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -693,17 +699,17 @@ header .cover .cover-dots-1 {
   max-width: 32rem;
   margin: 0 auto; }
 
-.webCTA .webCTA-wrapper figcaption {
+.webCTA figcaption {
   position: absolute;
   left: 10%;
   bottom: 5%; }
 
-.webCTA .webCTA-wrapper .webCTA-main {
+.webCTA .webCTA-main {
   width: 100%;
   position: relative;
   z-index: 500; }
 
-.webCTA .webCTA-wrapper .webCTA-course-1 {
+.webCTA .webCTA-course-1 {
   position: absolute;
   right: 6%;
   z-index: 1;
@@ -712,7 +718,7 @@ header .cover .cover-dots-1 {
   min-width: 4rem;
   max-width: 8rem; }
 
-.webCTA .webCTA-wrapper .webCTA-course-2 {
+.webCTA .webCTA-course-2 {
   position: absolute;
   left: calc(-1rem - 6%);
   top: 35%;
@@ -721,7 +727,7 @@ header .cover .cover-dots-1 {
   max-width: 16rem;
   z-index: 999; }
 
-.webCTA .webCTA-wrapper .webCTA-dots-1 {
+.webCTA .webCTA-dots-1 {
   position: absolute;
   top: 5%;
   right: 25%;
@@ -729,7 +735,7 @@ header .cover .cover-dots-1 {
   min-width: 4rem;
   max-width: 16rem; }
 
-.webCTA .webCTA-wrapper .webCTA-dots-2 {
+.webCTA .webCTA-dots-2 {
   position: absolute;
   bottom: 12%;
   left: 10%;
@@ -750,3 +756,13 @@ header .cover .cover-dots-1 {
     max-width: 50%;
     margin-right: 6rem;
     margin-top: 4rem; } }
+
+@media (min-width: 75rem) {
+  .webCTA .webCTA-course-1 {
+    bottom: calc(10% + 28rem); }
+  .webCTA .webCTA-course-2 {
+    top: calc(35% + 28rem); }
+  .webCTA .webCTA-dots-1 {
+    top: calc(5% - 28rem); }
+  .webCTA .webCTA-dots-2 {
+    bottom: calc(12% + 42rem); } }

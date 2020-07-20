@@ -18,7 +18,8 @@
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-uglify": "^4.0.1",
     "grunt-contrib-watch": "^1.1.0",
-    "node-sass": "^4.13.1"
+    "node-sass": "^4.13.1",
+    "rellax": "^1.12.1"
   },
   "devDependencies": {
     "simple-autoreload-server": "^0.2.7"

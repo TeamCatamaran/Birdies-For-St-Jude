@@ -48,7 +48,7 @@
                     arcset  = "assets/img/down-arrow.png 1x, assets/img/down-arrow@2x.png 2x"
                 />
             </div>
-            <div class="banner">
+            <div class="banner rellax">
                 <img
                     alt     = ""
                     src     = "assets/img/logo-birdies-small.png"
@@ -76,36 +76,46 @@
     
                 <img
                     alt     = ""
-                    class   = "cover-grass"
+                    class   = "cover-grass parallax"
                     src     = "assets/img/grass.png"
                     srcset  = "assets/img/grass.png 1x, assets/img/grass@2x.png 2x"
+                    data-rellax-speed="4"
+
                 />
                 <img
                     alt     = ""
-                    class   = "cover-course-1"
+                    class   = "cover-course-1 parallax"
                     src     = "assets/img/course-1.png"
                     srcset  = "assets/img/course-1.png 1x, assets/img/course-1@2x.png 2x"
+                    data-rellax-speed="-5"
                 />
                 <img
                     alt     = ""
-                    class   = "cover-course-2"
+                    class   = "cover-course-2 parallax"
                     src     = "assets/img/course-2.png"
                     srcset  = "assets/img/course-2.png 1x, assets/img/course-2@2x.png 2x"
+                    data-rellax-speed="-3"
                 />
                 <img
                     alt     = ""
-                    class   = "cover-course-3"
+                    class   = "cover-course-3 parallax"
                     src     = "assets/img/course-3.png"
                     srcset  = "assets/img/course-3.png 1x, assets/img/course-3@2x.png 2x"
+                    data-rellax-speed="2"
                 />
                 <img
                     alt     = ""
-                    class   = "cover-dots-1"
+                    class   = "cover-dots-1 parallax"
                     src     = "assets/img/dots-1.png"
                     srcset  = "assets/img/dots-1.png 1x, assets/img/dots-1@2x.png 2x"
+                    data-rellax-speed="2"
                 />
     
-                <figcaption aria-hidden="true">Brooks with St. Jude Patients Calvin, Bridget, Allyson, Reid, Bailey, Quincy, Dakota</figcaption>
+                <figcaption
+                    aria-hidden = "true"
+                    class       = "parallax"
+                    data-rellax-speed="1"
+                >Brooks with St. Jude Patients Calvin, Bridget, Allyson, Reid, Bailey, Quincy, Dakota</figcaption>
             </figure>
         </div>
     </header>
@@ -154,15 +164,23 @@
                 </div>
                 <img
                     alt     = ""
-                    class   = "about-course-1"
+                    class   = "about-course-1 parallax"
                     src     = "assets/img/course-4.png"
                     srcset  = "assets/img/course-4.png 1x, assets/img/course-4@2x.png 2x"
+                    data-rellax-speed="2"
+                    data-rellax-xs-speed="0"
+                    data-rellax-mobile-speed="0"
+                    data-rellax-tablet-speed="0"
                 />
                 <img
                     alt     = ""
-                    class   = "about-course-2"
+                    class   = "about-course-2 parallax"
                     src     = "assets/img/course-5.png"
                     srcset  = "assets/img/course-5.png 1x, assets/img/course-5@2x.png 2x"
+                    data-rellax-speed="4"
+                    data-rellax-xs-speed="0"
+                    data-rellax-mobile-speed="0"
+                    data-rellax-tablet-speed="0"
                 />
                 <figcaption>Hole 16, Par 5 at TPC Southwind</figcaption>
             </figure>
@@ -280,27 +298,43 @@
                 />
                 <img
                     alt     = ""
-                    class   = "webCTA-course-1"
+                    class   = "webCTA-course-1 parallax"
                     src     = "assets/img/course-6.png"
                     srcset  = "assets/img/course-6.png 1x, assets/img/course-6@2x.png 2x"
+                    data-rellax-speed="-2"
+                    data-rellax-xs-speed="0"
+                    data-rellax-mobile-speed="0"
+                    data-rellax-tablet-speed="0"
                 />
                 <img
                     alt     = ""
-                    class   = "webCTA-course-2"
+                    class   = "webCTA-course-2 parallax"
                     src     = "assets/img/course-7.png"
                     srcset  = "assets/img/course-7.png 1x, assets/img/course-7@2x.png 2x"
+                    data-rellax-speed="2"
+                    data-rellax-xs-speed="0"
+                    data-rellax-mobile-speed="0"
+                    data-rellax-tablet-speed="0"
                 />
                 <img
                     alt     = ""
-                    class   = "webCTA-dots-1"
+                    class   = "webCTA-dots-1 parallax"
                     src     = "assets/img/dots-2.png"
                     srcset  = "assets/img/dots-2.png 1x, assets/img/dots-2@2x.png 2x"
+                    data-rellax-speed="-2"
+                    data-rellax-xs-speed="0"
+                    data-rellax-mobile-speed="0"
+                    data-rellax-tablet-speed="0"
                 />
                 <img
                     alt     = ""
-                    class   = "webCTA-dots-2"
+                    class   = "webCTA-dots-2 parallax"
                     src     = "assets/img/dots-3.png"
                     srcset  = "assets/img/dots-3.png 1x, assets/img/dots-3@2x.png 2x"
+                    data-rellax-speed="-3"
+                    data-rellax-xs-speed="0"
+                    data-rellax-mobile-speed="0"
+                    data-rellax-tablet-speed="0"
                 />
                 <figcaption aria-hidden="true">Justin with patient Dakota</figcaption>
             </figure>
@@ -419,6 +453,16 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="assets/app.min.js?q=1"></script>
+
+    <script src="assets/js/libs/parallax.js"></script>
+    <script>
+        var parallax = new Rellax('.parallax');
+
+        $.stellar({
+            breakpoints: [600, 800, 1088]
+        });
+    </script>
 </body>
+
 
 </html>

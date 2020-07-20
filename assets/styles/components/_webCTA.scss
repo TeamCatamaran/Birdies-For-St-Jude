@@ -31,56 +31,56 @@
         position: relative;
         max-width: 32rem;
         margin: 0 auto;
+    }
 
-        figcaption {
-            position: absolute;
-            left: 10%;
-            bottom: 5%;
-        }
+    figcaption {
+        position: absolute;
+        left: 10%;
+        bottom: 5%;
+    }
 
-        .webCTA-main {
-            width: 100%;
-            position: relative;
-            z-index: 500;
-        }
+    .webCTA-main {
+        width: 100%;
+        position: relative;
+        z-index: 500;
+    }
 
-        .webCTA-course-1 {
-            position: absolute;
-            right: 6%;
-            z-index: 1;
-            bottom: 10%;
-            width: 20%;
-            min-width: 4rem;
-            max-width: 8rem;
-        }
+    .webCTA-course-1 {
+        position: absolute;
+        right: 6%;
+        z-index: 1;
+        bottom: 10%;
+        width: 20%;
+        min-width: 4rem;
+        max-width: 8rem;
+    }
 
-        .webCTA-course-2 {
-            position: absolute;
-            left: calc(-1rem - 6%);
-            top: 35%;
-            width: 30%;
-            min-width: 6rem;
-            max-width: 16rem;
-            z-index: 999;
-        }
+    .webCTA-course-2 {
+        position: absolute;
+        left: calc(-1rem - 6%);
+        top: 35%;
+        width: 30%;
+        min-width: 6rem;
+        max-width: 16rem;
+        z-index: 999;
+    }
 
-        .webCTA-dots-1 {
-            position: absolute;
-            top: 5%;
-            right: 25%;
-            width: 40%;
-            min-width: 4rem;
-            max-width: 16rem;
-        }
+    .webCTA-dots-1 {
+        position: absolute;
+        top: 5%;
+        right: 25%;
+        width: 40%;
+        min-width: 4rem;
+        max-width: 16rem;
+    }
 
-        .webCTA-dots-2 {
-            position: absolute;
-            bottom: 12%;
-            left: 10%;
-            width: 35%;
-            min-width: 4rem;
-            max-width: 16rem;
-        }
+    .webCTA-dots-2 {
+        position: absolute;
+        bottom: 12%;
+        left: 10%;
+        width: 35%;
+        min-width: 4rem;
+        max-width: 16rem;
     }
 
     @media (min-width: 68rem) {
@@ -98,6 +98,24 @@
             max-width: 50%;
             margin-right: 6rem;
             margin-top: 4rem;
+        }
+    }
+
+    @media (min-width: 75rem) {
+        .webCTA-course-1 {
+            bottom: calc(10% + 28rem);
+        }
+
+        .webCTA-course-2 {
+            top: calc(35% + 28rem);
+        }
+
+        .webCTA-dots-1 {
+            top: calc(5% - 28rem);
+        }
+
+        .webCTA-dots-2 {
+            bottom: calc(12% + 42rem);
         }
     }
 }
