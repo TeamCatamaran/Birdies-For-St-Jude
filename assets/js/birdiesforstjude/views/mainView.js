@@ -37,6 +37,7 @@ birdiesforstjude.views.MainView = (function () {
 
         _attachEvents: function () {
             $('[bd-show-more').on('click', $.proxy(this._handleShowMoreClick, this));
+            $('[bd-sort]').on('change', $.proxy(this._handleSortChange, this));
         },
 
         // --------------------------------------------
@@ -153,9 +154,11 @@ birdiesforstjude.views.MainView = (function () {
                 .removeClass("-preload");
         },
 
-        _handleSortChange: function (target, sort) {
-            $list = $(target).closest("section").find("[bd-golfers]");
-            $list.reOrder(this._getSort(sort, $list));
+        _handleSortChange: function (e) {
+            $target = $(e.currentTarget);
+            this._$golferLeaderboard.find('[bd-slug]')
+                .reOrder(this._getSort($target.find('option:selected').val(), this._$golferLeaderboard.find('[bd-slug]')), this._$golferLeaderboard, false);
+
         },
 
         _handleShowMoreClick: function (e) {
