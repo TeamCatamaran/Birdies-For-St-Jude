@@ -39,7 +39,7 @@ birdiesforstjude.views.MainView = (function () {
         _attachEvents: function () {
             $('[bd-show-more').on('click', $.proxy(this._handleShowMoreClick, this));
             $('[bd-sort]').on('change', $.proxy(this._handleSortChange, this));
-            $('[bd-search]').on('keyup', $.proxy(this._handleSearchKeyup, this));
+            $('[bd-search]').on('keyup search', $.proxy(this._handleSearchKeyup, this));
         },
 
         // --------------------------------------------
@@ -128,7 +128,7 @@ birdiesforstjude.views.MainView = (function () {
                     break;
                 case "rank":
                     items.sort(function (a, b) {
-                        return a.amount - b.amount;
+                        return b.amount - a.amount;
                     });
                     break;
             }
