@@ -98,9 +98,9 @@ header {
     }
 
     .cover {
-        overflow: visible;
+        overflow: hidden;
         position: relative;
-        padding-bottom: 8rem;
+        padding-bottom: 12rem;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
@@ -111,7 +111,7 @@ header {
             width: 50%;
             max-width: 12rem;
             left: 1rem;
-            bottom: -2rem;
+            bottom: 2rem;
             z-index: 999;
         }
 
@@ -155,7 +155,7 @@ header {
         .cover-course-3 {
             position: absolute;
             right: 8%;
-            bottom: -2%;
+            bottom: calc(-2% + 4rem);
             width: 45%;
             max-width: 735px;
         }
@@ -163,7 +163,7 @@ header {
         .cover-dots-1 {
             position: absolute;
             left: 8%;
-            bottom: 6%;
+            bottom: calc(6% + 4rem);
             width: 30%;
             max-width: 447px;
         }

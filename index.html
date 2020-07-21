@@ -6,6 +6,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="assets/main.css?q=1" rel="stylesheet">
     <link rel="icon" type="image/png" href="assets/img/favicon.png" sizes="16x16">
     <link rel="icon" type="image/png" href="assets/img/favicon32.png" sizes="32x32">
@@ -33,16 +34,38 @@
         <div class="header-wrapper">
             <div class="intro">
                 <img
-                    alt     = ""
-                    class   = "intro-logo"
-                    src     = "assets/img/logo-stjude.png"
-                    arcset  = "assets/img/logo-stjude.png 1x, assets/img/logo-stjude@2x.png 2x"
+                    alt                 = ""
+                    class               = "intro-logo"
+                    src                 = "assets/img/logo-stjude.png"
+                    arcset              = "assets/img/logo-stjude.png 1x, assets/img/logo-stjude@2x.png 2x"
+                    data-aos            = "fade-up"
+                    data-aos-duration   = "300"
                 />
-                <h1 itemprop="name" aria-label="Birdies for Saint Jude">Birdies for St. Jude</h1>
-                <p itemprop="description">Join us in the fight against childhood cancer by pledging every birdie #forStJude.</p>
-                <a class="button" href="#leaderboard">Find Your Golfer</a>
-                <img alt="" class="intro-arrow" src="assets/img/down-arrow.png"
-                    arcset="assets/img/down-arrow.png 1x, assets/img/down-arrow@2x.png 2x" />
+                <h1
+                    itemprop            = "name"
+                    aria-label          = "Birdies for Saint Jude"
+                    data-aos            = "fade-up"
+                    data-aos-duration   = "400"
+                >Birdies for St. Jude</h1>
+                <p
+                    itemprop            = "description"
+                    data-aos            = "fade-up"
+                    data-aos-duration   = "500"
+                >Join us in the fight against childhood cancer by pledging every birdie #forStJude.</p>
+                <a
+                    class               = "button"
+                    href                = "#leaderboard"
+                    data-aos            = "fade-up"
+                    data-aos-duration   = "600"
+                >Find Your Golfer</a>
+                <img
+                    alt                 = ""
+                    class               = "intro-arrow"
+                    src                 = "assets/img/down-arrow.png"
+                    srcset              = "assets/img/down-arrow.png 1x, assets/img/down-arrow@2x.png 2x"
+                    data-aos            = "fade-up"
+                    data-aos-duration   = "700"
+                />
             </div>
             <div class="banner rellax">
                 <img alt="" src="assets/img/logo-birdies-small.png"
@@ -62,20 +85,25 @@
             <figure class="cover">
                 <img alt="Brooks with St. Jude Patients Calvin, Bridget, Allyson, Reid, Bailey, Quincy, Dakota"
                     class="cover-main" src="assets/img/brooksandteam.png"
-                    srcset="assets/img/brooksandteam.png 1x, assets/img/brooksandteam@2x.png 2x" />
-
+                    srcset="assets/img/brooksandteam.png 1x, assets/img/brooksandteam@2x.png 2x"
+                    data-aos="fade-up" data-aos-duration="500" />
                 <img alt="" class="cover-grass parallax" src="assets/img/grass.png"
-                    srcset="assets/img/grass.png 1x, assets/img/grass@2x.png 2x" data-rellax-speed="4" />
+                    srcset="assets/img/grass.png 1x, assets/img/grass@2x.png 2x" data-rellax-speed="4"
+                    data-aos="fade-up" data-aos-duration="600" />
                 <img alt="" class="cover-course-1 parallax" src="assets/img/course-1.png"
-                    srcset="assets/img/course-1.png 1x, assets/img/course-1@2x.png 2x" data-rellax-speed="-5" />
+                    srcset="assets/img/course-1.png 1x, assets/img/course-1@2x.png 2x" data-rellax-speed="-5"
+                    data-aos="fade-up" data-aos-duration="700" />
                 <img alt="" class="cover-course-2 parallax" src="assets/img/course-2.png"
-                    srcset="assets/img/course-2.png 1x, assets/img/course-2@2x.png 2x" data-rellax-speed="-3" />
+                    srcset="assets/img/course-2.png 1x, assets/img/course-2@2x.png 2x" data-rellax-speed="-3"
+                    data-aos="fade-up" data-aos-duration="700" />
                 <img alt="" class="cover-course-3 parallax" src="assets/img/course-3.png"
-                    srcset="assets/img/course-3.png 1x, assets/img/course-3@2x.png 2x" data-rellax-speed="2" />
+                    srcset="assets/img/course-3.png 1x, assets/img/course-3@2x.png 2x" data-rellax-speed="2"
+                    data-aos="fade-up" data-aos-duration="700" />
                 <img alt="" class="cover-dots-1 parallax" src="assets/img/dots-1.png"
-                    srcset="assets/img/dots-1.png 1x, assets/img/dots-1@2x.png 2x" data-rellax-speed="2" />
+                    srcset="assets/img/dots-1.png 1x, assets/img/dots-1@2x.png 2x" data-rellax-speed="2"
+                    data-aos="fade-up" data-aos-duration="800" />
 
-                <figcaption aria-hidden="true" class="parallax" data-rellax-speed="1">Brooks with St. Jude Patients
+                <figcaption aria-hidden="true" class="parallax" data-rellax-speed="1" data-aos="fade-up" data-aos-duration="800">Brooks with St. Jude Patients
                     Calvin, Bridget, Allyson, Reid, Bailey, Quincy, Dakota</figcaption>
             </figure>
         </div>
@@ -85,12 +113,14 @@
             <div class="about-content">
                 <div class="about-logos">
                     <img alt="" src="assets/img/logo-birdies-medium.png"
-                        srcset="assets/img/logo-birdies-medium.png 1x, assets/img/logo-birdies-medium@2x.png 2x" />
+                        srcset="assets/img/logo-birdies-medium.png 1x, assets/img/logo-birdies-medium@2x.png 2x"
+                        data-aos="fade-up" data-aos-duration="500" />
                     <img alt="" src="assets/img/logo-stjude.png"
-                        srcset="assets/img/logo-stjude.png 1x, assets/img/logo-stjude@2x.png 2x" />
+                        srcset="assets/img/logo-stjude.png 1x, assets/img/logo-stjude@2x.png 2x"
+                        data-aos="fade-up" data-aos-duration="500" />
                 </div>
-                <h2>Lorem ipsum dolor sit amet</h1>
-                    <p itemprop="description">
+                <h2 data-aos="fade-up" data-aos-duration="500">Lorem ipsum dolor sit amet</h1>
+                    <p itemprop="description" data-aos="fade-up" data-aos-duration="600">
                         From
                         <time itemprop="startDate" datetime="2020-7-30">July 30th</time>
                         to
@@ -116,27 +146,30 @@
             <figure class="about-figure">
                 <div class="about-photo">
                     <img alt="Southwind" src="assets/img/southwind.png"
-                        srcset="assets/img/southwind.png 1x, assets/img/southwind@2x.png 2x" />
+                        srcset="assets/img/southwind.png 1x, assets/img/southwind@2x.png 2x"
+                        data-aos="fade-up" data-aos-duration="700" />
                 </div>
                 <img alt="" class="about-course-1 parallax" src="assets/img/course-4.png"
                     srcset="assets/img/course-4.png 1x, assets/img/course-4@2x.png 2x" data-rellax-speed="2"
-                    data-rellax-xs-speed="0" data-rellax-mobile-speed="0" data-rellax-tablet-speed="0" />
+                    data-rellax-xs-speed="0" data-rellax-mobile-speed="0" data-rellax-tablet-speed="0"
+                    data-aos="fade-up" data-aos-duration="800" />
                 <img alt="" class="about-course-2 parallax" src="assets/img/course-5.png"
                     srcset="assets/img/course-5.png 1x, assets/img/course-5@2x.png 2x" data-rellax-speed="4"
-                    data-rellax-xs-speed="0" data-rellax-mobile-speed="0" data-rellax-tablet-speed="0" />
-                <figcaption>Hole 16, Par 5 at TPC Southwind</figcaption>
+                    data-rellax-xs-speed="0" data-rellax-mobile-speed="0" data-rellax-tablet-speed="0"
+                    data-aos="fade-up" data-aos-duration="800" />
+                <figcaption data-aos="fade-up" data-aos-duration="700">Hole 16, Par 5 at TPC Southwind</figcaption>
             </figure>
         </div>
         <div class="section leaderboard" id="leaderboard">
-            <h2>Golfer Leaderboard</h2>
+            <h2 data-aos="fade-up" data-aos-duration="500">Golfer Leaderboard</h2>
             <div class="leaderboard-controls">
-                <div class="leaderboard-search">
+                <div class="leaderboard-search" data-aos="fade-up" data-aos-duration="700">
                     <img class="icon-search" alt="" src="assets/img/icon-search.png"
                         srcset="assets/img/icon-search.png 1x, assets/img/icon-search@2x.png 2x" />
                     <input id="search" type="search" aria-label="Find Your Golfer" required />
                     <label for="search">Find Your Golfer</label>
                 </div>
-                <div class="leaderboard-sort">
+                <div class="leaderboard-sort" data-aos="fade-up" data-aos-duration="700">
                     <select name="Sort by">
                         <option vale="" disabled selected>Sort By</option>
                         <option vale="Option A">Rank</option>
@@ -147,7 +180,7 @@
                         srcset="assets/img/down-arrow.png 1x, assets/img/down-arrow@2x.png 2x" />
                 </div>
             </div>
-            <div class="leaderboard-table">
+            <div class="leaderboard-table" data-aos="fade-up" data-aos-duration="700">
                 <table bd-leaderboard>
                     <tr>
                         <th scope="col">
@@ -214,38 +247,43 @@
                     </tr>
                 </table>
             </div>
-            <button bd-show-more>See More</button>
+            <button bd-show-more data-aos="fade-up" data-aos-duration="700">See More</button>
         </div>
         <div class="section webCTA">
             <div class="webCTA-content">
-                <img src="assets/img/logo-stjude-tagline.png" alt="" />
-                <h2>Finding Cures. Saving Children<sup>&#174;</sup>.</h2>
-                <p>That's something we can all agree on. Learn how St. Jude is leading the way the world understands,
+                <img src="assets/img/logo-stjude-tagline.png" alt="" data-aos="fade-up" data-aos-duration="500"/>
+                <h2 data-aos="fade-up" data-aos-duration="600">Finding Cures. Saving Children<sup>&#174;</sup>.</h2>
+                <p data-aos="fade-up" data-aos-duration="700">That's something we can all agree on. Learn how St. Jude is leading the way the world understands,
                     treats, and defeats childhood cancer and other life-threatening diseases.</p>
-                <a class="button" href="https://stjude.org/" target="_blank">Visit stjude.org</a>
+                <a class="button" href="https://stjude.org/" target="_blank" data-aos="fade-up" data-aos-duration="800">Visit stjude.org</a>
             </div>
             <figure class="webCTA-wrapper">
                 <img alt="Justin with patient Dakota" class="webCTA-main" src="assets/img/justin.png"
-                    srcset="assets/img/justin.png 1x, assets/img/justin@2x.png 2x" />
+                    srcset="assets/img/justin.png 1x, assets/img/justin@2x.png 2x"
+                    data-aos="fade-up" data-aos-duration="600"/>
                 <img alt="" class="webCTA-course-1 parallax" src="assets/img/course-6.png"
                     srcset="assets/img/course-6.png 1x, assets/img/course-6@2x.png 2x" data-rellax-speed="-2"
-                    data-rellax-xs-speed="0" data-rellax-mobile-speed="0" data-rellax-tablet-speed="0" />
+                    data-rellax-xs-speed="0" data-rellax-mobile-speed="0" data-rellax-tablet-speed="0"
+                    data-aos="fade-up" data-aos-duration="700"/>
                 <img alt="" class="webCTA-course-2 parallax" src="assets/img/course-7.png"
                     srcset="assets/img/course-7.png 1x, assets/img/course-7@2x.png 2x" data-rellax-speed="2"
-                    data-rellax-xs-speed="0" data-rellax-mobile-speed="0" data-rellax-tablet-speed="0" />
+                    data-rellax-xs-speed="0" data-rellax-mobile-speed="0" data-rellax-tablet-speed="0"
+                    data-aos="fade-up" data-aos-duration="800"/>
                 <img alt="" class="webCTA-dots-1 parallax" src="assets/img/dots-2.png"
                     srcset="assets/img/dots-2.png 1x, assets/img/dots-2@2x.png 2x" data-rellax-speed="-2"
-                    data-rellax-xs-speed="0" data-rellax-mobile-speed="0" data-rellax-tablet-speed="0" />
+                    data-rellax-xs-speed="0" data-rellax-mobile-speed="0" data-rellax-tablet-speed="0"
+                    data-aos="fade-up" data-aos-duration="900"/>
                 <img alt="" class="webCTA-dots-2 parallax" src="assets/img/dots-3.png"
                     srcset="assets/img/dots-3.png 1x, assets/img/dots-3@2x.png 2x" data-rellax-speed="-3"
-                    data-rellax-xs-speed="0" data-rellax-mobile-speed="0" data-rellax-tablet-speed="0" />
-                <figcaption aria-hidden="true">Justin with patient Dakota</figcaption>
+                    data-rellax-xs-speed="0" data-rellax-mobile-speed="0" data-rellax-tablet-speed="0"
+                    data-aos="fade-up" data-aos-duration="900"/>
+                <figcaption aria-hidden="true" data-aos="fade-up" data-aos-duration="700">Justin with patient Dakota</figcaption>
             </figure>
 
         </div>
         <div class="section callouts">
             <div class="callouts-wrapper">
-                <div class="callout">
+                <div class="callout" data-aos="fade-up" data-aos-duration="700">
                     <h2>Lorem ipsum dolor sit amet</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, nisi sit! Iure, earum ullam
                         ducimus vero, natus quis illum aliquam ratione obcaecati quisquam quibusdam eaque alias dolor.
@@ -254,7 +292,7 @@
                     <img alt="" class="callout-topo-1" src="assets/img/topo-1.png"
                         srcset="assets/img/topo-1.png 1x, assets/img/topo-1@2x.png 2x" />
                 </div>
-                <div class="callout">
+                <div class="callout" data-aos="fade-up" data-aos-duration="700">
                     <h2>Thank you to our sponsors</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, nisi sit! Iure, earum ullam
                         ducimus vero, natus quis illum aliquam ratione obcaecati quisquam quibusdam eaque alias dolor.
@@ -278,7 +316,7 @@
     </main>
     <footer>
         <div class="stjude">
-            <div class="footer-wrapper">
+            <div class="footer-wrapper" data-aos="fade-up" data-aos-duration="700">
                 <p>St. Jude is leading the way the world understands, treats, and defeats childhood cancer and other
                     life-threatening diseases.</p>
                 <div class="follow">
@@ -308,7 +346,7 @@
             </div>
         </div>
         <div class="credits">
-            <div class="footer-wrapper">
+            <div class="footer-wrapper" data-aos="fade-up" data-aos-duration="700">
                 <div class="credits-pledgeItLogo">
                     <img alt="Powered by Pledge It" src="assets/img/logo-pledgeit.png"
                         srcset="assets/img/logo-pledgeit.png 1x, assets/img/logo-pledgeit@2x.png 2x" />
@@ -345,8 +383,10 @@
     <script src="assets/app.js?q=1"></script>
 
     <script src="assets/js/libs/parallax.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         var parallax = new Rellax('.parallax');
+        AOS.init();
     </script>
 </body>
 

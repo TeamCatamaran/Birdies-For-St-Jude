@@ -3,8 +3,7 @@ figure {
     figcaption {
         @include caps;
         font-family: $font-brand;
-        color: $color-neutral;
-        opacity: .5;
+        color: rgba(97,97,97,.5);
         font-size: 11px;
         line-height: 1.25;
     }
