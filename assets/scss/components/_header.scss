@@ -100,7 +100,7 @@ header {
     .cover {
         overflow: hidden;
         position: relative;
-        padding-bottom: 12rem;
+        padding-bottom: calc(8rem + 10%);
         display: flex;
         flex-direction: column;
         align-items: flex-end;
@@ -111,7 +111,7 @@ header {
             width: 50%;
             max-width: 12rem;
             left: 1rem;
-            bottom: 2rem;
+            bottom: 4%;
             z-index: 999;
         }
 
@@ -130,7 +130,7 @@ header {
             height: auto;
             position: absolute;
             left: 4rem;
-            top: -6rem;
+            top: -7rem;
             z-index: 500;
             
         }
@@ -155,7 +155,7 @@ header {
         .cover-course-3 {
             position: absolute;
             right: 8%;
-            bottom: calc(-2% + 4rem);
+            bottom: 17%;
             width: 45%;
             max-width: 735px;
         }
@@ -163,7 +163,7 @@ header {
         .cover-dots-1 {
             position: absolute;
             left: 8%;
-            bottom: calc(6% + 4rem);
+            bottom: 25%;
             width: 30%;
             max-width: 447px;
         }
@@ -198,6 +198,10 @@ header {
             position: absolute;
             left: 50%;
             right: 0;
+
+            figcaption {
+                bottom: 15%;
+            }
         }
     }
 }

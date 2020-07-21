@@ -12,6 +12,7 @@
     font-size: 100%;
     vertical-align: baseline;
     font-family: $font-body;
+    -webkit-font-smoothing: antialiased !important;
 
     &:before, &:after {
         box-sizing: inherit;
