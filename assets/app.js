@@ -133,7 +133,8 @@ birdiesforstjude.views.MainView = (function () {
     MainView.prototype = {
         _$golferLeaderboard: null,
         _leaderboardService: null,
-        _itemsPerPage: 1,
+        _itemsPerPage: 10,
+
 
         // --------------------------------------------
         // Initialization
@@ -161,6 +162,7 @@ birdiesforstjude.views.MainView = (function () {
         _attachEvents: function () {
             $('[bd-show-more').on('click', $.proxy(this._handleShowMoreClick, this));
             $('[bd-sort]').on('change', $.proxy(this._handleSortChange, this));
+            $('[bd-search]').on('keyup', $.proxy(this._handleSearchKeyup, this));
         },
 
         // --------------------------------------------
@@ -212,19 +214,28 @@ birdiesforstjude.views.MainView = (function () {
                         .removeClass("-preload");
                     this._$golferLeaderboard.find('[bd-slug]')
                         .reOrder(this._getSort('rank', this._$golferLeaderboard.find('[bd-slug]')), this._$golferLeaderboard, true)
-                    this._showMore();
+                    this._$golferLeaderboard.find('[bd-slug]')
+                        .filter(':hidden')
+                        .slice(0, this._itemsPerPage)
+                        .removeClass("-preload");
+                    this._$golferLeaderboard
+                        .removeClass('-preload')
                 }, this));
         },
 
-        _getSort: function (sort, $list) {
-            var items = $list.map(function (index, golfer) {
-                var $golfer = $(golfer);
-                return {
-                    amount: parseFloat($golfer.find('[bd-amount]').text().replace(/[,\$]/g, '')),
-                    birdies: parseFloat($golfer.find('[bd-performance]').text()),
-                    name: $golfer.attr("bd-name")
-                }
+        _getFilter: function (search, $list) {
+            search = search.toLowerCase();
+            var items = this._mapItems($list).filter(function (index, item) {
+                return item.name.toLowerCase().indexOf(search) > -1;
             });
+
+            return items.map(function (i, r) {
+                return r.name;
+            });
+        },
+
+        _getSort: function (sort, $list) {
+            var items = this._mapItems($list);
 
             items.sort(function (a, b) {
                 var x = a.name.toLowerCase();
@@ -254,11 +265,15 @@ birdiesforstjude.views.MainView = (function () {
             return "$" + Number(parseFloat(amount.replace(/[,\$]/g, '')).toFixed(0)).toLocaleString();
         },
 
-        _showMore: function () {
-            this._$golferLeaderboard.find('[bd-slug]')
-                .filter(':hidden')
-                .slice(0, this._itemsPerPage)
-                .removeClass("-preload")
+        _mapItems: function ($list) {
+            return $list.map(function (index, golfer) {
+                var $golfer = $(golfer);
+                return {
+                    amount: parseFloat($golfer.find('[bd-amount]').text().replace(/[,\$]/g, '')),
+                    birdies: parseFloat($golfer.find('[bd-performance]').text()),
+                    name: $golfer.attr("bd-name")
+                }
+            });
         },
 
         // --------------------------------------------
@@ -277,17 +292,43 @@ birdiesforstjude.views.MainView = (function () {
                 .removeClass("-preload");
         },
 
+        _handleSearchKeyup: function (e) {
+            $target = $(e.currentTarget);
+
+            if ($target.val().length === 0) {
+                this._$golferLeaderboard.find('[bd-slug]')
+                    .filter(':hidden')
+                    .slice(0, this._itemsPerPage)
+                    .removeClass("-preload");
+                $('[bd-show-more]').removeClass('-preload');
+                $target.addClass('empty');
+                return;
+            }
+
+            var items = this._getFilter($target.val(), this._$golferLeaderboard.find('[bd-slug]'));
+            this._$golferLeaderboard.find('[bd-slug]')
+                .addClass('-preload')
+
+            for (var i = 0; i < items.length; i++) {
+                $('[bd-name="' + items[i] + '"]')
+                    .removeClass('-preload');
+            }
+            $('[bd-show-more]').addClass('-preload');
+            $target.removeClass('empty');
+        },
+
         _handleSortChange: function (e) {
             $target = $(e.currentTarget);
             this._$golferLeaderboard.find('[bd-slug]')
                 .reOrder(this._getSort($target.find('option:selected').val(), this._$golferLeaderboard.find('[bd-slug]')), this._$golferLeaderboard, false);
-
         },
 
         _handleShowMoreClick: function (e) {
             e.preventDefault();
-            this._showMore();
-            $(e.currentTarget).toggle(this._$golferLeaderboard.find('[bd-slug]').filter(':hidden').length !== 0);
+            this._$golferLeaderboard.find('[bd-slug]')
+                .filter(':hidden')
+                .removeClass("-preload")
+            $(e.currentTarget).addClass('-preload');
         }
     };
 
