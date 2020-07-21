@@ -20,6 +20,9 @@ html, body {
 img {
   display: block; }
 
+.-preload {
+  display: none; }
+
 button, .button {
   background-color: #1874dc;
   border-radius: 0.5rem;
@@ -523,8 +526,6 @@ header .cover {
       width: 100%;
       color: #000000;
       font-size: 1.25rem; }
-  .leaderboard .leaderboard-table tr[bd-slug] {
-    display: none; }
   .leaderboard .leaderboard-table td {
     padding: .5rem;
     white-space: nowrap;

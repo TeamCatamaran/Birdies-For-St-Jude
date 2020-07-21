@@ -28,6 +28,10 @@ img {
     display: block;
 }
 
+.-preload {
+    display: none;
+}
+
 
 @import "elements/_elements",
         "components/_components";
