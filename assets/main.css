@@ -501,7 +501,12 @@ header .cover {
       color: rgba(0, 0, 0, 0.5);
       padding: 0 1rem;
       -webkit-appearance: none;
-      appearance: none; }
+      appearance: none;
+      padding: 0 .5rem;
+      font-size: 1.25rem;
+      line-height: 3.125rem;
+      height: 3.125rem;
+      background-color: transparent; }
       .leaderboard .leaderboard-controls .leaderboard-sort select::-ms-expand {
         display: none; }
     .leaderboard .leaderboard-controls .leaderboard-sort .icon-downArrow {

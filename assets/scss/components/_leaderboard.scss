@@ -60,6 +60,11 @@
                 padding: 0 1rem;
                 -webkit-appearance: none;
                 appearance: none;
+                padding: 0 .5rem;
+                font-size: $size-large;
+                line-height: 3.125rem;
+                height: 3.125rem;
+                background-color: transparent;
 
                 &::-ms-expand {
                     display: none;
