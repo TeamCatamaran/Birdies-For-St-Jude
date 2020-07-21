@@ -100,22 +100,4 @@
             margin-top: 4rem;
         }
     }
-
-    @media (min-width: 75rem) {
-        .webCTA-course-1 {
-            bottom: calc(10% + 28rem);
-        }
-
-        .webCTA-course-2 {
-            top: calc(35% + 28rem);
-        }
-
-        .webCTA-dots-1 {
-            top: calc(5% - 28rem);
-        }
-
-        .webCTA-dots-2 {
-            bottom: calc(12% + 42rem);
-        }
-    }
 }
