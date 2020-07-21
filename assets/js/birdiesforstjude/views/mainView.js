@@ -198,6 +198,10 @@ birdiesforstjude.views.MainView = (function () {
             $target = $(e.currentTarget);
             this._$golferLeaderboard.find('[bd-slug]')
                 .reOrder(this._getSort($target.find('option:selected').val(), this._$golferLeaderboard.find('[bd-slug]')), this._$golferLeaderboard, false);
+            this._$golferLeaderboard.find('[bd-slug]')
+                .filter(':hidden')
+                .removeClass("-preload")
+            $('[bd-show-more]').addClass('-preload');
         },
 
         _handleShowMoreClick: function (e) {
