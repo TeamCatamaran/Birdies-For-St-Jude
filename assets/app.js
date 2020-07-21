@@ -109,19 +109,16 @@ pledgeit.services.LeaderboardService = (function () {
 
 (function ($) {
 
-    $.fn.reOrder = function (array) {
-        return this.each(function () {
-
-            if (array) {
-                for (var i = 0; i < array.length; i++)
-                    array[i] = $('[gs-name="' + array[i] + '"]');
-
-                $(this).empty();
-
-                for (var i = 0; i < array.length; i++)
-                    $(this).append(array[i]);
+    $.fn.reOrder = function (array, $parent, updateRank) {
+        if (array) {
+            for (var i = 0; i < array.length; i++) {
+                array[i] = $('[bd-name="' + array[i] + '"]');
+                if (updateRank) {
+                    array[i].find('[bd-rank]').text(i + 1);
+                }
+                $parent.append(array[i]);
             }
-        });
+        }
     }
 })(jQuery);
 var services = pledgeit.services;
@@ -134,6 +131,7 @@ birdiesforstjude.views.MainView = (function () {
     }
 
     MainView.prototype = {
+        _$golferLeaderboard: null,
         _leaderboardService: null,
         _itemsPerPage: 1,
 
@@ -142,6 +140,7 @@ birdiesforstjude.views.MainView = (function () {
         // --------------------------------------------
 
         _initialize: function () {
+            this._$golferLeaderboard = $('[bd-leaderboard]');
 
             this._leaderboardService = new services.LeaderboardService();
 
@@ -181,7 +180,7 @@ birdiesforstjude.views.MainView = (function () {
             birdies = 0;
             promises = [];
 
-            $('[bd-slug]').each($.proxy(function (index, golfer) {
+            this._$golferLeaderboard.find('[bd-slug]').each($.proxy(function (index, golfer) {
                 promises.push(new Promise($.proxy(function (resolve, reject) {
                     this._leaderboardService.getCampaign(golfer.getAttribute("bd-slug"), {
                         onSuccess: $.proxy(function (response) {
@@ -210,20 +209,18 @@ birdiesforstjude.views.MainView = (function () {
                     $('[bd-birdie-stats]')
                         .text(birdies)
                         .removeClass("-preload");
-                    $('[bd-slug')
-                        .each($.proxy(function (index, golfer) {
-                            $(golfer).find('[bd-rank')
-                                .text(index + 1)
-                        }, this));
+                    this._$golferLeaderboard.find('[bd-slug]')
+                        .reOrder(this._getSort('rank', this._$golferLeaderboard.find('[bd-slug]')), this._$golferLeaderboard, true)
                     this._showMore();
                 }, this));
         },
 
         _getSort: function (sort, $list) {
-            var items = $list.find("[bd-name]").map(function (index, golfer) {
+            var items = $list.map(function (index, golfer) {
                 var $golfer = $(golfer);
                 return {
                     amount: parseFloat($golfer.find('[bd-amount]').text().replace(/[,\$]/g, '')),
+                    birdies: parseFloat($golfer.find('[bd-performance]').text()),
                     name: $golfer.attr("bd-name")
                 }
             });
@@ -235,12 +232,12 @@ birdiesforstjude.views.MainView = (function () {
             });
 
             switch (sort) {
-                case "high":
+                case "birdies":
                     items.sort(function (a, b) {
-                        return b.amount - a.amount;
+                        return b.birdies - a.birdies;
                     });
                     break;
-                case "low":
+                case "rank":
                     items.sort(function (a, b) {
                         return a.amount - b.amount;
                     });
@@ -257,10 +254,10 @@ birdiesforstjude.views.MainView = (function () {
         },
 
         _showMore: function () {
-            $('[bd-slug]')
+            this._$golferLeaderboard.find('[bd-slug]')
                 .filter(':hidden')
                 .slice(0, this._itemsPerPage)
-                .show();
+                .removeClass("-preload")
         },
 
         // --------------------------------------------
@@ -287,7 +284,7 @@ birdiesforstjude.views.MainView = (function () {
         _handleShowMoreClick: function (e) {
             e.preventDefault();
             this._showMore();
-            $(e.currentTarget).toggle($('[bd-slug]').filter(':hidden').length !== 0);
+            $(e.currentTarget).toggle(this._$golferLeaderboard.find('[bd-slug]').filter(':hidden').length !== 0);
         }
     };
 
