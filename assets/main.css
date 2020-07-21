@@ -20,6 +20,11 @@ html, body {
 img {
   display: block; }
 
+.hide {
+  display: block;
+  position: absolute;
+  top: -99999rem; }
+
 button, .button {
   background-color: #1874dc;
   border-radius: 0.5rem;
@@ -64,7 +69,7 @@ h1 {
 h2 {
   font-size: 2.25rem; }
 
-input, select, textarea {
+input, textarea {
   border: 2px solid #000000;
   border-radius: 0.5rem;
   padding: 0 .5rem;
@@ -72,15 +77,15 @@ input, select, textarea {
   line-height: 3.125rem;
   height: 3.125rem;
   background-color: white; }
-  input::-webkit-input-placeholder, select::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
     color: #d4d4d4; }
-  input:-moz-placeholder, select:-moz-placeholder, textarea:-moz-placeholder {
+  input:-moz-placeholder, textarea:-moz-placeholder {
     /* Firefox 18- */
     color: #d4d4d4; }
-  input::-moz-placeholder, select::-moz-placeholder, textarea::-moz-placeholder {
+  input::-moz-placeholder, textarea::-moz-placeholder {
     /* Firefox 19+ */
     color: #d4d4d4; }
-  input:-ms-input-placeholder, select:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     color: #d4d4d4; }
 
 dl {
@@ -480,11 +485,15 @@ header .cover {
     flex-direction: row;
     align-items: center;
     position: relative;
-    margin: .5rem; }
+    margin: .5rem;
+    border: 2px solid #000000;
+    border-radius: 0.5rem; }
     .leaderboard .leaderboard-controls .leaderboard-sort select {
       width: 100%;
       color: rgba(0, 0, 0, 0.5);
-      padding-right: 1rem; }
+      padding: 0 1rem;
+      -webkit-appearance: none;
+      appearance: none; }
       .leaderboard .leaderboard-controls .leaderboard-sort select::-ms-expand {
         display: none; }
     .leaderboard .leaderboard-controls .leaderboard-sort .icon-downArrow {
@@ -513,7 +522,7 @@ header .cover {
     font-weight: bold;
     letter-spacing: .1em;
     font-family: Rift, sans-serif;
-    height: 10rem;
+    height: 9rem;
     position: relative; }
     .leaderboard .leaderboard-table th .rotate-none {
       display: block;
@@ -546,14 +555,11 @@ header .cover {
     display: flex;
     flex-direction: row;
     align-items: center;
-    position: absolute;
+    position: relative;
     justify-content: center;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
     padding-bottom: .5rem;
-    text-align: left; }
+    text-align: left;
+    height: 9rem; }
   .leaderboard .leaderboard-table th:nth-of-type(1) .rotate-content,
   .leaderboard .leaderboard-table th:nth-of-type(3) .rotate-content,
   .leaderboard .leaderboard-table th:nth-of-type(4) .rotate-content,
@@ -562,9 +568,13 @@ header .cover {
     transform: rotate(-90deg);
     text-align: left;
     white-space: nowrap;
-    text-align: left; }
-  .leaderboard .leaderboard-table tr:not(:last-child) {
-    border-bottom: 2px solid #d4d4d4; }
+    text-align: left;
+    width: 9rem;
+    text-align: left;
+    position: absolute;
+    padding-left: .5rem; }
+  .leaderboard .leaderboard-table tr:not(:first-child) {
+    border-top: 2px solid #d4d4d4; }
   .leaderboard .leaderboard-table th:not(:last-child), .leaderboard .leaderboard-table td:not(:last-child) {
     border-right: 2px solid #d4d4d4; }
 

@@ -46,11 +46,15 @@
             align-items: center;
             position: relative;
             margin: .5rem;
+            border: $border-width solid $color-neutral-dark;
+            border-radius: $border-radius;
 
             select {
                 width: 100%;
                 color: rgba(0,0,0,.5);
-                padding-right: 1rem;
+                padding: 0 1rem;
+                -webkit-appearance: none;
+                appearance: none;
 
                 &::-ms-expand {
                     display: none;
@@ -93,7 +97,7 @@
             @include caps;
             letter-spacing: .1em;
             font-family: $font-brand;
-            height: 10rem;
+            height: 9rem;
             position: relative;
 
             .rotate-none {
@@ -145,14 +149,11 @@
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-                position: absolute;
+                position: relative;
                 justify-content: center;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
                 padding-bottom: .5rem;
                 text-align: left;
+                height: 9rem;
             }
 
             .rotate-content {
@@ -161,11 +162,15 @@
                 text-align: left;
                 white-space: nowrap;
                 text-align: left;
+                width: 9rem;
+                text-align: left;
+                position: absolute;
+                padding-left: .5rem;
             }
         }
 
-        tr:not(:last-child) {
-            border-bottom: $border-width solid $color-neutral-light;
+        tr:not(:first-child) {
+            border-top: $border-width solid $color-neutral-light;
         }
 
         th:not(:last-child), td:not(:last-child) {

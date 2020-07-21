@@ -28,6 +28,12 @@ img {
     display: block;
 }
 
+.hide {
+    display: block;
+    position: absolute;
+    top: -99999rem;
+}
+
 
 @import "elements/_elements",
         "components/_components";
