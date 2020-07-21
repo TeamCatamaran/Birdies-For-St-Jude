@@ -130,18 +130,18 @@ var views = birdiesforstjude.views;
 birdiesforstjude.views.MainView = (function () {
     function MainView() {
         this._initialize();
+        this._attachEvents();
     }
 
     MainView.prototype = {
-        _$stats: null,
         _leaderboardService: null,
+        _itemsPerPage: 1,
 
         // --------------------------------------------
         // Initialization
         // --------------------------------------------
 
         _initialize: function () {
-            this._$stats = $('[bd-stats]');
 
             this._leaderboardService = new services.LeaderboardService();
 
@@ -159,6 +159,10 @@ birdiesforstjude.views.MainView = (function () {
             }
         },
 
+        _attachEvents: function () {
+            $('[bd-show-more').on('click', $.proxy(this._handleShowMoreClick, this));
+        },
+
         // --------------------------------------------
         // Private Methods
         // --------------------------------------------
@@ -166,8 +170,7 @@ birdiesforstjude.views.MainView = (function () {
         _getStats: function () {
             this._leaderboardService.getTemplate("birdiesforstjude", {
                 onSuccess: $.proxy(function (response) {
-                    this._$stats
-                        .find('[bd-total-stats]')
+                    $('[bd-total-stats]')
                         .text(this._getValue(response.amountRaised))
                         .removeClass("-preload");
                 }, this)
@@ -176,31 +179,44 @@ birdiesforstjude.views.MainView = (function () {
 
         _getGolfers: function () {
             birdies = 0;
+            promises = [];
 
-            $("[bd-slug]").each($.proxy(function (index, golfer) {
-                this._leaderboardService.getCampaign(golfer.getAttribute("bd-slug"), {
-                    onSuccess: $.proxy(function (response) {
-                        $target = $(golfer);
-                        $target.find("[bd-amount]")
-                            .text(this._getValue(response.amountRaised))
-                            .removeClass("-preload");
+            $('[bd-slug]').each($.proxy(function (index, golfer) {
+                promises.push(new Promise($.proxy(function (resolve, reject) {
+                    this._leaderboardService.getCampaign(golfer.getAttribute("bd-slug"), {
+                        onSuccess: $.proxy(function (response) {
+                            $target = $(golfer);
+                            $target.find("[bd-amount]")
+                                .text(this._getValue(response.amountRaised))
+                                .removeClass("-preload");
 
-                        $target.find("[bd-performance]")
-                            .text(response.performanceTotal)
-                            .removeClass("-preload");
+                            $target.find("[bd-performance]")
+                                .text(response.performanceTotal)
+                                .removeClass("-preload");
 
-                        $target.find("[bd-donate]")
-                            .attr("href", response.url + "/pledge")
-                            .removeClass("-preload");
+                            $target.find("[bd-donate]")
+                                .attr("href", response.url + "/pledge")
+                                .removeClass("-preload");
 
-                        birdies += response.performanceTotal;
-                        this._$stats
-                            .find('[bd-birdie-stats]')
-                            .text(birdies)
-                            .removeClass("-preload");
-                    }, this)
-                });
-            }, this))
+                            birdies += response.performanceTotal;
+                            resolve();
+                        }, this)
+                    });
+                }, this)))
+            }, this));
+
+            Promise.all(promises)
+                .then($.proxy(function () {
+                    $('[bd-birdie-stats]')
+                        .text(birdies)
+                        .removeClass("-preload");
+                    $('[bd-slug')
+                        .each($.proxy(function (index, golfer) {
+                            $(golfer).find('[bd-rank')
+                                .text(index + 1)
+                        }, this));
+                    this._showMore();
+                }, this));
         },
 
         _getSort: function (sort, $list) {
@@ -240,6 +256,13 @@ birdiesforstjude.views.MainView = (function () {
             return "$" + Number(parseFloat(amount.replace(/[,\$]/g, '')).toFixed(0)).toLocaleString();
         },
 
+        _showMore: function () {
+            $('[bd-slug]')
+                .filter(':hidden')
+                .slice(0, this._itemsPerPage)
+                .show();
+        },
+
         // --------------------------------------------
         // Event Handlers
         // --------------------------------------------
@@ -259,6 +282,12 @@ birdiesforstjude.views.MainView = (function () {
         _handleSortChange: function (target, sort) {
             $list = $(target).closest("section").find("[bd-golfers]");
             $list.reOrder(this._getSort(sort, $list));
+        },
+
+        _handleShowMoreClick: function (e) {
+            e.preventDefault();
+            this._showMore();
+            $(e.currentTarget).toggle($('[bd-slug]').filter(':hidden').length !== 0);
         }
     };
 

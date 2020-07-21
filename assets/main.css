@@ -523,6 +523,8 @@ header .cover {
       width: 100%;
       color: #000000;
       font-size: 1.25rem; }
+  .leaderboard .leaderboard-table tr[bd-slug] {
+    display: none; }
   .leaderboard .leaderboard-table td {
     padding: .5rem;
     white-space: nowrap;
