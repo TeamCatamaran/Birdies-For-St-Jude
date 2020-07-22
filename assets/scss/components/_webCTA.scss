@@ -37,6 +37,11 @@
         position: absolute;
         left: 10%;
         bottom: 5%;
+
+        @media (max-width: 32rem) {
+            left: 2%;
+            bottom: -1rem;
+        }
     }
 
     .webCTA-main {

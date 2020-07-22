@@ -1,4 +1,3 @@
-@import "https://unpkg.com/aos@next/dist/aos.css";
 @import url("https://use.typekit.net/fpv5xjs.css");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
 * {
@@ -665,6 +664,10 @@ header .cover {
     position: absolute;
     left: 10%;
     bottom: 5%; }
+    @media (max-width: 32rem) {
+      .webCTA figcaption {
+        left: 2%;
+        bottom: -1rem; } }
   .webCTA .webCTA-main {
     width: 100%;
     position: relative;
