@@ -198,7 +198,7 @@ birdiesforstjude.views.MainView = (function () {
                                 .removeClass("-preload");
 
                             $target.find("[bd-donate]")
-                                .attr("href", response.url)
+                                .attr("href", response.url + "/pledge")
                                 .removeClass("-preload");
 
                             birdies += response.performanceTotal;
