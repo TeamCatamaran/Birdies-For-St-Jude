@@ -163,6 +163,7 @@ birdiesforstjude.views.MainView = (function () {
             $('[bd-show-more').on('click', $.proxy(this._handleShowMoreClick, this));
             $('[bd-sort]').on('change', $.proxy(this._handleSortChange, this));
             $('[bd-search]').on('keyup search', $.proxy(this._handleSearchKeyup, this));
+            $('[bd-anchor]').on('click', $.proxy(this._handleAnchorLinkClick, this));
         },
 
         // --------------------------------------------
@@ -279,6 +280,15 @@ birdiesforstjude.views.MainView = (function () {
         // --------------------------------------------
         // Event Handlers
         // --------------------------------------------
+
+        _handleAnchorLinkClick: function (e) {
+            anchor = document.querySelector(e.currentTarget.getAttribute('href'));
+            if (typeof (anchor.scrollIntoView) == "undefined") {
+                return;
+            }
+            e.preventDefault();
+            anchor.scrollIntoView({ behavior: 'smooth' });
+        },
 
         _handleGolferSuccess: function (response, $target) {
             $target.find("[bd-amount]")
