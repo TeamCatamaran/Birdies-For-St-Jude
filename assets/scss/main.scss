@@ -2,6 +2,8 @@
 @import "brand-specs",
         "mixins/_mixins";
 
+$aos-distance: 200px;
+@import "../../node_modules/aos/src/sass/aos.scss";
 
 
 * {
