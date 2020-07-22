@@ -1,3 +1,4 @@
+@import "https://unpkg.com/aos@next/dist/aos.css";
 @import url("https://use.typekit.net/fpv5xjs.css");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
 * {
@@ -352,7 +353,7 @@ header .banner {
   height: 4rem;
   width: calc(100% - 1rem);
   max-width: 68rem;
-  margin: 0 auto; }
+  margin: 0 .5rem; }
   header .banner .banner-stats {
     display: flex; }
     header .banner .banner-stats .stat-label {
@@ -383,11 +384,10 @@ header .banner {
 header .cover {
   overflow: hidden;
   position: relative;
-  padding-bottom: calc(8rem + 10%);
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  margin-bottom: 10%; }
+  padding-bottom: calc(14rem + 10%); }
   header .cover figcaption {
     position: absolute;
     width: 50%;
@@ -435,15 +435,24 @@ header .cover {
     bottom: 25%;
     width: 30%;
     max-width: 447px; }
+@media (min-width: 34rem) {
+  header .header-wrapper {
+    margin-bottom: 10%; }
+  header .intro {
+    margin-top: -4rem; }
+  header .cover figcaption {
+    bottom: 12%; } }
 @media (min-width: 68rem) {
   header .header-wrapper {
     flex-direction: row;
-    justify-content: flex-start; }
+    justify-content: flex-start;
+    margin-bottom: 10%; }
   header .intro {
     width: 50%;
     padding-top: 6rem;
     text-align: left;
-    align-items: flex-start; }
+    align-items: flex-start;
+    margin-top: 0; }
     header .intro h1 {
       margin: 0; }
     header .intro p {
@@ -455,7 +464,15 @@ header .cover {
     left: 50%;
     right: 0; }
     header .cover figcaption {
-      bottom: 15%; } }
+      bottom: 25%; }
+    header .cover .cover-course-1 {
+      top: 10%; }
+    header .cover .cover-course-2 {
+      top: 8%; }
+    header .cover .cover-course-3 {
+      bottom: calc(17% + 6rem); }
+    header .cover .cover-dots-1 {
+      bottom: calc(25% + 6rem); } }
 
 .leaderboard h2 {
   margin-bottom: 3rem; }
@@ -524,12 +541,25 @@ header .cover {
   border: 2px solid #d4d4d4;
   border-radius: 0.5rem;
   overflow: hidden;
-  margin: 3rem 0; }
+  margin: 3rem 0;
+  /*
+  @media (min-width: 68rem) {
+      th:nth-of-type(1), td:nth-of-type(1),
+      th:nth-of-type(3), td:nth-of-type(3),
+      th:nth-of-type(4), td:nth-of-type(4) {
+          width: 10%;
+      }
+  }
+  */ }
+  @media (max-width: 34rem) {
+    .leaderboard .leaderboard-table {
+      margin-left: -1rem;
+      margin-right: -1rem; } }
   .leaderboard .leaderboard-table table {
     border-collapse: collapse;
     width: 100%; }
   .leaderboard .leaderboard-table th, .leaderboard .leaderboard-table td {
-    min-width: 5rem; }
+    min-width: 4rem; }
   .leaderboard .leaderboard-table th {
     letter-spacing: .2rem;
     text-transform: uppercase;
@@ -547,26 +577,30 @@ header .cover {
       color: #000000;
       font-size: 1.25rem; }
   .leaderboard .leaderboard-table td {
-    padding: .5rem;
+    padding: .25rem;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis; }
-  @media (max-width: 68rem) {
+    @media (min-width: 68rem) {
+      .leaderboard .leaderboard-table td {
+        padding: .5rem; } }
+  @media (max-width: 34rem) {
+    .leaderboard .leaderboard-table .button {
+      padding: 0 .5rem;
+      line-height: 2.5rem;
+      font-size: 1rem; } }
+  @media (max-width: 40rem) {
     .leaderboard .leaderboard-table th:nth-of-type(1), .leaderboard .leaderboard-table td:nth-of-type(1),
     .leaderboard .leaderboard-table th:nth-of-type(3), .leaderboard .leaderboard-table td:nth-of-type(3) {
       display: none; } }
   .leaderboard .leaderboard-table th:nth-of-type(2), .leaderboard .leaderboard-table td:nth-of-type(2) {
-    width: 70%; }
-  @media (min-width: 68rem) {
-    .leaderboard .leaderboard-table th:nth-of-type(1), .leaderboard .leaderboard-table td:nth-of-type(1),
-    .leaderboard .leaderboard-table th:nth-of-type(3), .leaderboard .leaderboard-table td:nth-of-type(3),
-    .leaderboard .leaderboard-table th:nth-of-type(4), .leaderboard .leaderboard-table td:nth-of-type(4) {
-      width: 10%; } }
-  .leaderboard .leaderboard-table th:nth-of-type(2), .leaderboard .leaderboard-table td:nth-of-type(2) {
     text-align: left;
-    padding-left: 1rem; }
+    padding-left: .5rem; }
+    @media (min-width: 68rem) {
+      .leaderboard .leaderboard-table th:nth-of-type(2), .leaderboard .leaderboard-table td:nth-of-type(2) {
+        padding-left: 1rem; } }
   .leaderboard .leaderboard-table th:nth-of-type(5), .leaderboard .leaderboard-table td:nth-of-type(5) {
-    width: 8rem; }
+    padding: .25rem; }
   .leaderboard .leaderboard-table th:nth-of-type(1) .rotate-wrapper,
   .leaderboard .leaderboard-table th:nth-of-type(3) .rotate-wrapper,
   .leaderboard .leaderboard-table th:nth-of-type(4) .rotate-wrapper,

@@ -51,7 +51,7 @@ header {
         height: 4rem;
         width: calc(100% - 1rem);
         max-width: 68rem;
-        margin: 0 auto;
+        margin: 0 .5rem;
 
         .banner-stats {
             display: flex;
@@ -100,11 +100,10 @@ header {
     .cover {
         overflow: hidden;
         position: relative;
-        padding-bottom: calc(8rem + 10%);
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        margin-bottom: 10%;
+        padding-bottom: calc(14rem + 10%);
 
         figcaption {
             position: absolute;
@@ -169,10 +168,28 @@ header {
         }
     }
 
+    @media (min-width: 34rem) {
+        .header-wrapper {
+            margin-bottom: 10%;
+        }
+
+        .intro {
+            margin-top: -4rem;
+        }
+
+        .cover {
+            figcaption {
+                bottom: 12%;
+            }
+        }
+    }
+
     @media (min-width: 68rem) {
+
         .header-wrapper {
             flex-direction: row;
             justify-content: flex-start;
+            margin-bottom: 10%;
         }
         
         .intro {
@@ -180,6 +197,7 @@ header {
             padding-top: 6rem;
             text-align: left;
             align-items: flex-start;
+            margin-top: 0;
 
             h1 {
                 margin: 0;
@@ -200,7 +218,23 @@ header {
             right: 0;
 
             figcaption {
-                bottom: 15%;
+                bottom: 25%;
+            }
+
+            .cover-course-1 {
+                top: 10%;
+            }
+    
+            .cover-course-2 {
+                top: 8%;
+            }
+    
+            .cover-course-3 {
+                bottom: calc(17% + 6rem);
+            }
+    
+            .cover-dots-1 {
+                bottom: calc(25% + 6rem);
             }
         }
     }

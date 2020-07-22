@@ -238,7 +238,7 @@
                     <tr class="-preload" itemprop="performer" itemscope itemtype="https://schema.org/Person"
                         bd-slug="dechambeau-birdies" bd-name="DeChambeau, Bryson">
                         <td bd-rank>0</td>
-                        <td scope="row" itemprop="name">DeChambeau, Bryson</td>
+                        <td scope="row" itemprop="name"><span>DeChambeau, Bryson</span></td>
                         <td class="-preload" bd-performance>0</td>
                         <td class="-preload" bd-amount>$0</td>
                         <td>
@@ -867,7 +867,9 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         var parallax = new Rellax('.parallax');
-        AOS.init();
+        AOS.init({
+            duration: 100,
+        });
     </script>
 </body>
 
