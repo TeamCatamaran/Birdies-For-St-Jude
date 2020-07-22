@@ -132,6 +132,7 @@ birdiesforstjude.views.MainView = (function () {
 
     MainView.prototype = {
         _$golferLeaderboard: null,
+        _$leaderboardEmpty: null,
         _leaderboardService: null,
         _itemsPerPage: 10,
 
@@ -142,6 +143,7 @@ birdiesforstjude.views.MainView = (function () {
 
         _initialize: function () {
             this._$golferLeaderboard = $('[bd-leaderboard]');
+            this._$leaderboardEmpty = $('[bd-leaderboard-empty]');
 
             this._leaderboardService = new services.LeaderboardService();
 
@@ -325,6 +327,9 @@ birdiesforstjude.views.MainView = (function () {
             }
             $('[bd-show-more]').addClass('-preload');
             $target.removeClass('empty');
+
+            this._$golferLeaderboard.toggle(items.length > 0);
+            this._$leaderboardEmpty.toggle(items.length === 0);
         },
 
         _handleSortChange: function (e) {
