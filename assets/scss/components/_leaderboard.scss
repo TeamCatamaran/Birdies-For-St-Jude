@@ -98,6 +98,12 @@
         overflow: hidden;
         margin: 3rem 0;
 
+        .leaderboard-noResults {
+            margin: 2rem 0;
+            color: $color-neutral;
+            text-align: center;
+        }
+
         @media (max-width: 34rem) {
             margin-left: -1rem;
             margin-right: -1rem;
