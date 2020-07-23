@@ -526,6 +526,11 @@ html, body {
   font-family: Open Sans, sans-serif;
   color: #616161; }
 
+sup {
+  font-family: Rift, sans-serif;
+  vertical-align: super;
+  line-height: 1rem; }
+
 img {
   display: block; }
 
@@ -1163,8 +1168,6 @@ header .cover {
       margin-bottom: 2rem; }
     .webCTA .webCTA-content h2 {
       margin-bottom: 2rem; }
-      .webCTA .webCTA-content h2 sup {
-        font-family: Rift, sans-serif; }
     .webCTA .webCTA-content p {
       font-size: 1.25rem;
       margin-bottom: 2rem; }

@@ -28,6 +28,12 @@ html, body {
     color: $color-neutral;
 }
 
+sup {
+    font-family: $font-brand;
+    vertical-align: super;
+    line-height: 1rem;
+}
+
 img {
     display: block;
 }
