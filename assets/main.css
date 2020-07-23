@@ -1168,6 +1168,8 @@ header .cover {
       margin-bottom: 2rem; }
     .webCTA .webCTA-content h2 {
       margin-bottom: 2rem; }
+      .webCTA .webCTA-content h2 sup {
+        vertical-align: baseline; }
     .webCTA .webCTA-content p {
       font-size: 1.25rem;
       margin-bottom: 2rem; }
