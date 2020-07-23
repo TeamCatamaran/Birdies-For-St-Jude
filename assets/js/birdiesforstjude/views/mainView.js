@@ -93,7 +93,7 @@ birdiesforstjude.views.MainView = (function () {
                         .text(birdies)
                         .removeClass("-preload");
                     this._$golferLeaderboard.find('[bd-slug]')
-                        .reOrder(this._getSort('rank', this._$golferLeaderboard.find('[bd-slug]')), this._$golferLeaderboard, true)
+                        .reOrder(this._getSort('rank', this._$golferLeaderboard.find('[bd-slug]')), this._$golferLeaderboard)
                     this._$golferLeaderboard.find('[bd-slug]')
                         .filter(':hidden')
                         .slice(0, this._itemsPerPage)
@@ -215,12 +215,15 @@ birdiesforstjude.views.MainView = (function () {
 
         _handleSortChange: function (e) {
             $target = $(e.currentTarget);
+            sort = $target.find('option:selected').val()
             this._$golferLeaderboard.find('[bd-slug]')
-                .reOrder(this._getSort($target.find('option:selected').val(), this._$golferLeaderboard.find('[bd-slug]')), this._$golferLeaderboard, false);
+                .reOrder(this._getSort(sort, this._$golferLeaderboard.find('[bd-slug]')), this._$golferLeaderboard);
             this._$golferLeaderboard.find('[bd-slug]')
                 .filter(':hidden')
                 .removeClass("-preload")
             $('[bd-show-more]').addClass('-preload');
+            $('[bd-sort-rank]').hide();
+            $('[bd-sort-rank="' + sort + '"]').show();
         },
 
         _handleShowMoreClick: function (e) {

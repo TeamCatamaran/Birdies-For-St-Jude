@@ -151,7 +151,6 @@
                 <div class="leaderboard-sort" data-aos="fade-up" data-aos-duration="700">
                     <select name="Sort by" bd-sort>
                         <option value="" disabled hidden selected>Sort By</option>
-                        <option value="alpha">Alphabetical</option>
                         <option value="birdies">Birdies</option>
                         <option value="rank">Est. $ Raised</option>
                     </select>
@@ -167,7 +166,9 @@
                     <tr>
                         <th scope="col">
                             <span class="rotate-wrapper">
-                                <span class="rotate-content">Rank</span>
+                                <span class="rotate-content" bd-sort-rank="rank">Rank<br />(Est. $ Raised)</span>
+                                <span class="rotate-content" bd-sort-rank="birdies" style="display: none;">Rank<br />
+                                    (Birdies)</span>
                             </span>
                         </th>
                         <th scope="col">

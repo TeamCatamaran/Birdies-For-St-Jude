@@ -1078,7 +1078,7 @@ header .cover {
     font-weight: bold;
     letter-spacing: .1em;
     font-family: Rift, sans-serif;
-    height: 9rem;
+    height: 10.5rem;
     position: relative; }
     .leaderboard .leaderboard-table th .rotate-none {
       display: block;
@@ -1128,7 +1128,7 @@ header .cover {
     justify-content: center;
     padding-bottom: .5rem;
     text-align: left;
-    height: 9rem; }
+    height: 10.5rem; }
   .leaderboard .leaderboard-table th:nth-of-type(1) .rotate-content,
   .leaderboard .leaderboard-table th:nth-of-type(3) .rotate-content,
   .leaderboard .leaderboard-table th:nth-of-type(4) .rotate-content,
@@ -1138,7 +1138,7 @@ header .cover {
     text-align: left;
     white-space: nowrap;
     text-align: left;
-    width: 9rem;
+    width: 10.5rem;
     text-align: left;
     position: absolute;
     padding-left: .5rem; }
