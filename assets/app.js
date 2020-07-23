@@ -307,6 +307,9 @@ birdiesforstjude.views.MainView = (function () {
         _handleSearchKeyup: function (e) {
             $target = $(e.currentTarget);
 
+            this._$golferLeaderboard.find('[bd-slug]')
+                .addClass('-preload')
+
             if ($target.val().length === 0) {
                 this._$golferLeaderboard.find('[bd-slug]')
                     .filter(':hidden')
@@ -314,12 +317,13 @@ birdiesforstjude.views.MainView = (function () {
                     .removeClass("-preload");
                 $('[bd-show-more]').removeClass('-preload');
                 $target.addClass('empty');
+
+                this._$golferLeaderboard.show();
+                this._$leaderboardEmpty.hide();
                 return;
             }
 
             var items = this._getFilter($target.val(), this._$golferLeaderboard.find('[bd-slug]'));
-            this._$golferLeaderboard.find('[bd-slug]')
-                .addClass('-preload')
 
             for (var i = 0; i < items.length; i++) {
                 $('[bd-name="' + items[i] + '"]')
