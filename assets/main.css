@@ -827,8 +827,7 @@ header .header-wrapper {
   display: flex;
   flex-direction: column-reverse;
   align-items: stretch;
-  justify-content: flex-end;
-  margin-bottom: 15%; }
+  justify-content: flex-end; }
 header .intro {
   display: flex;
   flex-direction: column;
@@ -943,8 +942,6 @@ header .cover {
     width: 30%;
     max-width: 447px; }
 @media (min-width: 34rem) {
-  header .header-wrapper {
-    margin-bottom: 10%; }
   header .intro {
     margin-top: -4rem; }
   header .cover figcaption {
@@ -952,8 +949,7 @@ header .cover {
 @media (min-width: 68rem) {
   header .header-wrapper {
     flex-direction: row;
-    justify-content: flex-start;
-    margin-bottom: 10%; }
+    justify-content: flex-start; }
   header .intro {
     width: 50%;
     padding-top: 6rem;
