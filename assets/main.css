@@ -542,6 +542,11 @@ img {
 .-preload {
   display: none; }
 
+a.plain {
+  color: #1874dc; }
+  a.plain:hover {
+    color: #3d8eea; }
+
 button, .button {
   background-color: #1874dc;
   border-radius: 0.5rem;
