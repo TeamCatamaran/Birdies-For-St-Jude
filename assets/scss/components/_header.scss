@@ -1,5 +1,5 @@
 
-header {    
+header {
     .header-wrapper {
         max-width: 68rem;
         margin: 0 auto;
@@ -7,6 +7,10 @@ header {
         flex-direction: column-reverse;
         align-items: stretch;
         justify-content: flex-end;
+
+        @media (min-width: 106rem) {
+            margin-bottom: 15%;
+        }
     }
 
     .intro {
@@ -54,7 +58,7 @@ header {
 
         .banner-stats {
             display: flex;
-            
+
 
             .stat-label {
                 text-transform: uppercase;
@@ -70,7 +74,7 @@ header {
                 color: $color-primary;
                 font-size: $size-base;
                 font-weight: $weight-semiBold;
-                
+
             }
 
             @media (max-width: 36rem) {
@@ -88,7 +92,7 @@ header {
                 align-items: center;
                 justify-content: space-evenly;
                 flex-grow: 1;
-                
+
                 .stat-label, .stat-value {
                     margin: .25rem;
                 }
@@ -130,7 +134,7 @@ header {
             left: 4rem;
             top: -7rem;
             z-index: 500;
-            
+
         }
 
         .cover-course-1 {
@@ -185,7 +189,7 @@ header {
             flex-direction: row;
             justify-content: flex-start;
         }
-        
+
         .intro {
             width: 50%;
             padding-top: 6rem;
@@ -218,15 +222,15 @@ header {
             .cover-course-1 {
                 top: 10%;
             }
-    
+
             .cover-course-2 {
                 top: 8%;
             }
-    
+
             .cover-course-3 {
                 bottom: calc(17% + 6rem);
             }
-    
+
             .cover-dots-1 {
                 bottom: calc(25% + 6rem);
             }

@@ -838,6 +838,9 @@ header .header-wrapper {
   flex-direction: column-reverse;
   align-items: stretch;
   justify-content: flex-end; }
+  @media (min-width: 106rem) {
+    header .header-wrapper {
+      margin-bottom: 15%; } }
 header .intro {
   display: flex;
   flex-direction: column;
